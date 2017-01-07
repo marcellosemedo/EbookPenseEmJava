@@ -1,10 +1,6 @@
 # ThinkJava
-# Pense em Java - Tradução para Língua Portuguesa
 
 LaTeX source and code for Think Java, 6th edition.
-Copyright (C) 2016 Allen Downey and Chris Mayfield.
-
-Código em LaTex para Pense em Java, 6a edição.
 Copyright (C) 2016 Allen Downey and Chris Mayfield.
 
 Permission is granted to copy, distribute, and/or modify this work under the
@@ -29,3 +25,31 @@ To compile the PDF version from source:
 
 The source code includes a Makefile that automates this process.
 On Linux, you will need to install texlive-latex-extra and hevea.
+
+# Pense em Java - Tradução para Língua Portuguesa
+
+Código em LaTex para Pense em Java, 6a edição.
+Direitos Autorais (C) 2016 Allen Downey e Chris Mayfield.
+
+É concedida permissão para copiar, distribuir e / ou modificar este trabalho 
+sob os termos da Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported
+License, disponível em https://creativecommons.org/licenses/by-nc-sa/3.0/deed.pt_BR.
+
+O deste livro tem o código-fonte Latex disponível em: 
+http://thinkjava.org and https://github.com/AllenDowney/ThinkJava.
+
+As ilustrações foram desenhadas usando xfig (http://www.xfig.org/) e dia
+(https://wiki.gnome.org/Apps/Dia/). Estas ferramentas lá gratuitas e open-source.
+
+Ao compilar esse fonte LaTex gera uma representação independente de máquina deste livro, 
+que pode ser convertida para outros formatos e impresso.
+
+Para compilar para uma versão em PDF:
+
+    pdflatex thinkjava
+    makeindex thinkjava
+    pdflatex thinkjava
+    pdflatex thinkjava
+
+O código fonte inclui um arquivo Makefile que automatiza este processo.
+No Linux, será necessário instalar os pacotes texlive-latex-extra e hevea.
