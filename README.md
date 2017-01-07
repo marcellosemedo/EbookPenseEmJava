@@ -1,7 +1,10 @@
 # ThinkJava
 # Pense em Java - Tradução para Língua Portuguesa
+
 LaTeX source and code for Think Java, 6th edition.
 Copyright (C) 2016 Allen Downey and Chris Mayfield.
+
+Código em LaTex para Pense em Java, 6a edição.
 
 Permission is granted to copy, distribute, and/or modify this work under the
 terms of the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported
