@@ -1,11 +1,16 @@
 \documentclass[12pt]{book}
 
-\title{Think Java}
+%Permite uso de caracteres da Língua Portuguesa
+%\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+
+\title{Think Java - Pense em Java}
 \author{Allen B. Downey and Chris Mayfield}
 
-\newcommand{\thetitle}{Think Java}
-\newcommand{\thesubtitle}{How to Think Like a Computer Scientist}
-\newcommand{\theauthors}{Allen B. Downey and Chris Mayfield}
+\newcommand{\thetitle}{Think Java - Pense em Java}
+\newcommand{\thesubtitle}{Como pensar como um cientista da Computação}
+\newcommand{\theauthors}{Allen B. Downey e Chris Mayfield}
 \newcommand{\theversion}{6.1.2}
 
 %%%% Both LATEX and PLASTEX
@@ -145,7 +150,7 @@ Version \theversion
 \newpage
 \thispagestyle{empty}
 
-Copyright \copyright ~2016 \theauthors.
+Direitos autorais \copyright ~2016 \theauthors.
 
 \vspace{0.2in}
 
@@ -198,52 +203,51 @@ Permission is granted to copy, distribute, and/or modify this work under the ter
 \fi
 
 
-\chapter*{Preface}
+\chapter*{Prefácio}
 \label{preface}
 
 \markboth{PREFACE}{PREFACE}
-\addcontentsline{toc}{chapter}{Preface}
+\addcontentsline{toc}{chapter}{Prefácio}
 
-{\it Think Java} is an introduction to computer science and programming intended for readers with little or no experience.
-We start with the most basic concepts and are careful to define all terms when they are first used.
-The book presents each new idea in a logical progression.
-Larger topics, like recursion and object-oriented programming, are divided into smaller examples and introduced over the course of several chapters.
+{\it Pense em Java} é uma introdução à Ciência da Computação e a programação planejada para leitores com pouca ou nenhuma experiência.
+Começamos com os conceitos mais básicos e meticulosamente definimos todos os termos conforme são usados pela primeira vez.
+O livro apresenta cada nova idéia numa progressão lógica.
+Os tópicos maiores, como recursão e programação orientada à objetos, são divididos em exemplos menores e são apresentados em vários capítulos.
 
-This book is intentionally concise.
-Each chapter is 12--14 pages and covers the material for one week of a college course.
-It is not meant to be a comprehensive presentation of Java, but rather, an initial exposure to programming constructs and techniques.
-We begin with small problems and basic algorithms and work up to object-oriented design.
-In the vocabulary of computer science pedagogy, this book uses the ``objects late'' approach.
+Este livro é intencionalmente conciso.
+Cada capítulo tem de 12 a 14 páginas e representa o material de estudo de uma semana para um curso de facudade.
+Não pretende ser uma apresentação abrangente do Java, pelo contrário, uma exposição inicial às contruções e técnicas de programação.
+Começa com problemas pequenos e algoritmos básicos e avança para projetos orientados à objetos.
+No vocabulário pedagógico da Ciência da Computação, este livro usa a abordagem "objetos depois".
 
+\section*{A filosofia por trás deste livro}
 
-\section*{The philosophy behind the book}
-
-Here are the guiding principles that make the book the way it is:
+Seguem os princípios que direcionam a forma deste livro:
 
 \begin{itemize}
 
-\item {\em One concept at a time.}
-We break down topics that give beginners trouble into a series of small steps, so that they can exercise each new concept in isolation before continuing.
+\item {\em Um conceito por vez.}
+Dividimos os tópicos difíceis para iniciantes numa série de pequenos passos. Assim pode-se exercitar cada novo conceito isoladamente antes de se prosseguir.
 
-\item {\em Balance of Java and concepts.}
-The book is not primarily about Java; it uses code examples to demonstrate computer science.
-Most chapters start with language features and end with concepts.
+\item {\em Equilíbrio entre Java e conceitos.}
+O livro não é essencialmente sobre Java - usa códigos para exemplifica a Ciência da Computação.
+A maioria dos capítulos começam com as características da linguagem e finalizam com conceitos.
 
-\item {\em Conciseness.}
-An important goal of the book is to be small enough so that students can read and understand the entire text in a one-semester college or AP course.
+\item {\em Concisão.}
+Uma das metas importantes deste livro é ser pequeno o suficiente para que estudantes possam ler e entender o texto inteiro no período semestral da faculdade ou outro curso (do original {\it AP course}).
 %Students can read 1--2 chapters per week, depending on the pace of the instruction.
 
-\item {\em Emphasis on vocabulary.}
-We try to introduce the minimum number of terms and define them carefully when they are first used.
-We also organize them in glossaries at the end of each chapter.
+\item {\em Ênfase no vocabulário.}
+Tentamos apresentar um número mínimo de termos e definí-los cuidadosamente quando são usados pela primeira vez.
+Também tentamos organiá-los em glossários ao final de cada capítulo
 
-\item {\em Program development.}
-There are many strategies for writing programs, including bottom-up, top-down, and others.
-We demonstrate multiple program development techniques, allowing readers to choose methods that work best for them.
+\item {\em Desenvolvimento de programa.}
+Existem muitas estratégias para se escrever programas, incluindo-se {\it bottom-up, top-down,} e outras.
+Demonstramos variadas técnicas de desenvolvimentos de programas, possibilitando os leitores escolherem a que considerem melhor.
 
-\item {\em Multiple learning curves.}
-To write a program, you have to understand the algorithm, know the programming language, and be able to debug errors.
-We discuss these and other aspects throughout the book, and include an appendix that summarizes our advice.
+\item {\em Curvas de aprendizagem múltiplas.}
+Para escrever um programa, você deve entender o algoritmo, conhecer a linguagem de programação e ser hábil na depuração de erros.
+Discutimos esse e outros aspectos no decorrer do livro, e incluímos um apêndice que resume nossas recomendações.
 
 %\item {\em Spiral approach.}
 %Some concepts take time to sink in.
@@ -258,23 +262,22 @@ We discuss these and other aspects throughout the book, and include an appendix 
 \end{itemize}
 
 
-\section*{Object-oriented programming}
+\section*{Programação orientada a objetos}
 
-Some Java books introduce classes and objects immediately; others begin with procedural programming and transition to object-oriented more gradually.
+Alguns livros de Java apresentam classes e objetos de imediato; outros se iniciam com programação procedural e avançam para orientação a objetos gradualmente. 
 
-Many of Java's object-oriented features are motivated by problems with previous languages, and their implementations are influenced by this history.
-Some of these features are hard to explain when people aren't familiar with the problems they solve.
+A maioria dos recursos orientados a objetos do Java são motivados por problemas com outras linguagens anteriores, e a implementação dessas funcionalidades são influenciadas por essa história. 
+Alguns desses recursos são difíceis de explicar quando as pessoas não são familiares com os problemas a resolver.
 
-We get to object-oriented programming as quickly as possible, limited by the requirement that we introduce concepts one at a time, as clearly as possible, in a way that allows readers to practice each idea in isolation before moving on.
-So it takes some time to get there.
+Avançamos para a programação orientada a objetos rapidamente assim que possível, limitados à condição de apresentar um conceito por vez, o mais claro possível, de modo a permiir que os leitores pratiquem cada idéia separadamente antes de prosseguir.
+Então leva algum tempo para chegar lá.
 
-But you can't write Java programs (even hello world) without encountering object-oriented features.
-In some cases we explain a feature briefly when it first appears, and then explain it more deeply later on.
+Mas, você não pode escrever programa Java (nem mesmo o {\it Alô, mundo!}) sem se deparar com recursos orientados a objetos. Em alguns casos explicamos a funcionalidade brevemente que aparece pela primeira vez, e explicá-las mais profundamente depois.
 
-This book is well suited to prepare students for the AP Computer Science A exam, which includes object-oriented design and implementation.
-(AP is a registered trademark of the College Board.)
-We introduce nearly every topic in the ``AP Java subset'' with a few exceptions.
-A mapping of {\it Think Java} section numbers to the current AP course description is available on our website: \url{http://thinkjava.org}.
+Este livro é bem adequado para a preparação de estudantes para o exame {\it AP Computer Science A), que inclui projeto e implementação orientados a objeto.
+(AP é marca registrada de College Board.)
+Próximo a cada tópido, apresentamos o ''subconjunto AP Java'' com algumas exceções.
+Um mapeamento entre os números de seção do livro {\it Think Java} e o a descrição do AP course estão disponível : \url{http://thinkjava.org}.
 
 
 \section*{Appendixes}
