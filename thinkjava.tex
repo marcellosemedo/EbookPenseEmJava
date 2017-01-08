@@ -3,7 +3,9 @@
 %Permite uso de caracteres da Língua Portuguesa
 %\usepackage[brazilian]{babel}
 \usepackage[utf8]{inputenc}
-%\usepackage[T1]{fontenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{ulem}
 
 \title{Think Java - Pense em Java}
 \author{Allen B. Downey and Chris Mayfield}
@@ -206,7 +208,7 @@ Permission is granted to copy, distribute, and/or modify this work under the ter
 \chapter*{Prefácio}
 \label{preface}
 
-\markboth{PREFACE}{PREFACE}
+\markboth{PREFÁCIO}{PREFÁCIO}
 \addcontentsline{toc}{chapter}{Prefácio}
 
 {\it Pense em Java} é uma introdução à Ciência da Computação e a programação planejada para leitores com pouca ou nenhuma experiência.
@@ -215,9 +217,9 @@ O livro apresenta cada nova idéia numa progressão lógica.
 Os tópicos maiores, como recursão e programação orientada à objetos, são divididos em exemplos menores e são apresentados em vários capítulos.
 
 Este livro é intencionalmente conciso.
-Cada capítulo tem de 12 a 14 páginas e representa o material de estudo de uma semana para um curso de facudade.
-Não pretende ser uma apresentação abrangente do Java, pelo contrário, uma exposição inicial às contruções e técnicas de programação.
-Começa com problemas pequenos e algoritmos básicos e avança para projetos orientados à objetos.
+Cada capítulo tem de 12 a 14 páginas e representa o material de estudo de uma semana para um curso de graduação.
+Não pretende ser uma apresentação abrangente do Java, pelo contrário, uma exposição inicial às construções e técnicas de programação.
+Começa com problemas pequenos e algoritmos básicos e avança para projetos orientados a objetos.
 No vocabulário pedagógico da Ciência da Computação, este livro usa a abordagem "objetos depois".
 
 \section*{A filosofia por trás deste livro}
@@ -230,16 +232,16 @@ Seguem os princípios que direcionam a forma deste livro:
 Dividimos os tópicos difíceis para iniciantes numa série de pequenos passos. Assim pode-se exercitar cada novo conceito isoladamente antes de se prosseguir.
 
 \item {\em Equilíbrio entre Java e conceitos.}
-O livro não é essencialmente sobre Java - usa códigos para exemplifica a Ciência da Computação.
+O livro não é essencialmente sobre Java - usa códigos exemplificando a Ciência da Computação.
 A maioria dos capítulos começam com as características da linguagem e finalizam com conceitos.
 
 \item {\em Concisão.}
-Uma das metas importantes deste livro é ser pequeno o suficiente para que estudantes possam ler e entender o texto inteiro no período semestral da faculdade ou outro curso (do original {\it AP course}).
+Uma das metas importantes deste livro é ser pequeno o suficiente para que os estudantes possam ler e entender o texto inteiro no período semestral da faculdade ou outro curso (do original {\it AP course}).
 %Students can read 1--2 chapters per week, depending on the pace of the instruction.
 
 \item {\em Ênfase no vocabulário.}
-Tentamos apresentar um número mínimo de termos e definí-los cuidadosamente quando são usados pela primeira vez.
-Também tentamos organiá-los em glossários ao final de cada capítulo
+Tentamos apresentar um número mínimo de termos e defini-los cuidadosamente quando são usados pela primeira vez.
+Também tentamos organizá-los em glossários ao final de cada capítulo
 
 \item {\em Desenvolvimento de programa.}
 Existem muitas estratégias para se escrever programas, incluindo-se {\it bottom-up, top-down,} e outras.
@@ -266,142 +268,145 @@ Discutimos esse e outros aspectos no decorrer do livro, e incluímos um apêndic
 
 Alguns livros de Java apresentam classes e objetos de imediato; outros se iniciam com programação procedural e avançam para orientação a objetos gradualmente. 
 
-A maioria dos recursos orientados a objetos do Java são motivados por problemas com outras linguagens anteriores, e a implementação dessas funcionalidades são influenciadas por essa história. 
+A maioria dos recursos orientados a objetos do Java são motivados por problemas que ocorriam com outras linguagens anteriores, e a implementação dessas funcionalidades são influenciadas por essa história. 
 Alguns desses recursos são difíceis de explicar quando as pessoas não são familiares com os problemas a resolver.
 
-Avançamos para a programação orientada a objetos rapidamente assim que possível, limitados à condição de apresentar um conceito por vez, o mais claro possível, de modo a permiir que os leitores pratiquem cada idéia separadamente antes de prosseguir.
+Avançamos para a programação orientada a objetos rapidamente assim que possível, limitados à condição de apresentar um conceito por vez, o mais claro possível, de modo a permitir que os leitores pratiquem cada idéia separadamente antes de prosseguir.
 Então leva algum tempo para chegar lá.
 
-Mas, você não pode escrever programa Java (nem mesmo o {\it Alô, mundo!}) sem se deparar com recursos orientados a objetos. Em alguns casos explicamos a funcionalidade brevemente que aparece pela primeira vez, e explicá-las mais profundamente depois.
+Mas, você não pode escrever um programa Java (nem mesmo o {\it Alô, mundo!}) sem se deparar com recursos orientados a objetos. Em alguns casos explicamos a funcionalidade brevemente que aparece pela primeira vez, e as explicamos mais profundamente depois.
 
-Este livro é bem adequado para a preparação de estudantes para o exame {\it AP Computer Science A), que inclui projeto e implementação orientados a objeto.
+Este livro é bem adequado para a preparação de estudantes para o exame {\it AP Computer Science A}, que inclui projeto e implementação orientados a objeto.
 (AP é marca registrada de College Board.)
-Próximo a cada tópido, apresentamos o ''subconjunto AP Java'' com algumas exceções.
-Um mapeamento entre os números de seção do livro {\it Think Java} e o a descrição do AP course estão disponível : \url{http://thinkjava.org}.
+Próximo a cada tópico, apresentamos o ''subconjunto AP Java'' com algumas exceções.
+Um mapeamento entre os números de seção do livro {\it Think Java - Pense em Java} e a descrição do AP course estão disponíveis em : \url{http://thinkjava.org}.
 
 
-\section*{Appendixes}
+\section*{Apêndices}
 
-The chapters of this book are meant to be read in order, because each one builds on the previous one.
-We also include three appendixes with material that can be read at any time:
+Os capítulos deste livro foram idealizados para serem lidos na ordem, porque cada depende do seu capítulo anteriores.
+Incluímos também três apêndices com materiais que podem ser lidos a qualquer momento:
 
 \begin{description}
 
-\item{\bf Appendix 1: Development tools}
+\item{\bf Apêndice 1: Ferramentas de Desenvolvimento}
 
-The steps for compiling, running, and debugging Java code depend on the details of the development environment and operating system.
-We avoided putting these details in the main text, because they can be distracting.
-Instead, we provide this appendix with a brief introduction to DrJava -- an interactive development environment (IDE) that is helpful for beginners -- and other development tools, including Checkstyle for code quality and JUnit for testing.
+Os passos necessário para compilar, executar e depurar o código Java depende das características de ambiente de desenvolvimento e do sistema operacional. Evitamos colocar estes detalhes no texto principal porque podem causar confusões.
+Ao invés disso, disponibilizamos este apêndice com uma breve introdução ao DrJava -- um ambiente de desenvolvimento integrado (IDE) que é prestativo aos iniciantes -- e outras ferramentas de desenvolvimento, incluindo o Checkstyle para qualidade de software e JUnit para testes.
 
-\item{\bf Appendix 2: Java 2D graphics}
+\item{\bf Apêndice 2: Gráficos em Java 2D}
 
-Java provides libraries for working with graphics and animation, and these topics can be engaging for students.
-The libraries require object-oriented features that readers will not completely understand until after Chapter~\ref{classes}, but they can be used much earlier.
+O Java disponibiliza bibliotecas para trabalhar com gráficos e animação, tópicos que podem ser atraentes para estudantes.
+As bibliotecas necessitam recurso de orientação a objetos que os leitores não compreenderão completamente até completar o Capítulo~\ref{classes}, mas podem ser usada mais antecipadamente.
 
-\item{\bf Appendix 3: Debugging}
+\item{\bf Apêndice 3: Depuração}
 
-We provide debugging suggestions throughout the book, but we also collect our debugging advice in an appendix.
-We recommend that readers review this appendix several times as they work through the book.
+Disponibilizamos sugestões de depuração ao passar do livro, mas também juntamos nossas recomendações de depuração num apêndice.
+Recomendamos que os leitores revejam este apêndice muitas vezes no decorrer das atividades do livro. 
 
 \end{description}
 
 
-\section*{Using the code examples}
+\section*{Usando os exemplos de códigos}
 \label{code}
 
-Most of the code examples in this book are available from a Git repository at \url{https://github.com/AllenDowney/ThinkJavaCode}.
-Git is a ``version control system'' that allows you to keep track of the files that make up a project.
-A collection of files under Git's control is called a ``repository''.
+A maioria dos exemplos de códigos deste livro estão disponíveis num repositório Git em \url{https://github.com/AllenDowney/ThinkJavaCode}.
+Git é um ''sistema de controle de versão'' que permite rastrear os arquivos que compõem um projeto.
+Uma coleção de arquivos sobre controle do Git é chamada de ''repositório Git''.
+({\it Nota do tradutor:} o termo ''repositório'' quer dizer ''local de armazenamento'', em geral. COMPLETAR A DIFERENÇA)
+
 
 \index{repository}
 \index{GitHub}
 
-GitHub is a hosting service that provides storage for Git repositories and a convenient web interface.
-It provides several ways to work with the code:
+GitHub é um serviço de hospedagem que disponibiliza um local de armazenamento para repositórios Git e uma prática interface web.
+Dispõe de muitos modos de trabalhar com o código:
 
 \begin{itemize}
 
-\item You can create a copy of the repository on GitHub by pressing the {\sf Fork} button.
-If you don't already have a GitHub account, you'll need to create one.
-After forking, you'll have your own repository on GitHub that you can use to keep track of code you write.
-Then you can ``clone'' the repository, which downloads a copy of the files to your computer.
+\item Você pode criar uma cópia de um repositório no GitHub pressionando o botão {\sf Fork}.
+Se você ainda não tiver uma conta no GitHub, necessitará criar uma.
+Após o uso do ''fork'', você terá seu próprio repositório no GitHub que você poderá acompanhar o código que você escreve.
+Então você pode ''clonar'' o repositório, baixando uma cópia dos arquivos para o seu computador.
 
-\item Alternatively, you could clone the repository without forking.
-If you choose this option, you don't need a GitHub account, but you won't be able to save your changes on GitHub.
+\item Alternativamente, você poderá clonar o repositório sem uso do ''fork''.
+Caso escolha essa opção, não necessitará de uma conta no GitHub, porém não será capaz de salvar as modificações no repositório GitHub.
 
-\item If you don't want to use Git at all, you can download the code in a ZIP archive using the {\sf Download ZIP} button on the GitHub page, or this link: \url{http://tinyurl.com/ThinkJavaCodeZip}.
+\item Se você não quer utilizar o Git de forma nenhuma, poderá baixar o código num arquivo ZIP usando o botão {\sf Download ZIP} na página do GitHub, ou neste link: \url{http://tinyurl.com/ThinkJavaCodeZip}.
 
 \end{itemize}
 
-After you clone the repository or unzip the ZIP file, you should have a directory called {\tt ThinkJavaCode} with a subdirectory for each chapter in the book.
+Após clonar o repositório e descompactar o arquivo ZIP, você terá um diretório chamado {\tt ThinkJavaCode} com um subdiretório para cada capítulo deste livro.
 
-All examples in this book were developed and tested using Java SE Development Kit 8.
-If you are using a more recent version, the examples in this book should still work.
-If you are using an older version, some of them may not.
+Todos os exemplos neste livro foram desenvolvimento e testados usando o Java SE Development Kit 8.
+Se você estiver usando uma versão mais recente, os exemplos deste livro deverão ainda funcionar.
+Se você estiver usando uma versão mais antiga, alguns destes podem não funcionar.
 
 
-\section*{Contributors over the years}
+\section*{Contribuidores ao passar dos anos}
 
 %This list starts with the 4th Edition, so it omits many people who contributed to earlier versions.
 
-Many people have sent corrections and suggestions, and we appreciate their valuable feedback!
+Muitas pessoas enviaram correções e sugestões, e nós estimamos seus valorosos feedbacks!
 
 \begin{itemize}
 
-\item Ellen Hildreth used this book to teach Data Structures at Wellesley College and submitted a whole stack of corrections, along with some great suggestions.
+\item Ellen Hildreth usou o livro no ensino de Estrutura de Dados na Wellesley College e enviou uma grande quantidade de correções juntamente com algumas ótimas sugestões.
 
-\item Tania Passfield pointed out that some glossaries had leftover terms that no longer appeared in the text.
+\item Tania Passfield assinalou que alguns glossários contêm termos em excesso que não aparecem mais ao longo do texto.
 
-\item Elizabeth Wiethoff noticed that the series expansion of $\exp(-x^2)$ was wrong.
-She has also worked on a Ruby version of the book.
+\item Elizabeth Wiethoff notou que as expansões de séries $\exp(-x^2)$ estavam erradas.
+Ela também trabalhou na versão Ruby deste livro.
 
-\item Matt Crawford sent in a whole patch file full of corrections.
+\item Matt Crawford enviou um grande arquivo de {\it patch} cheio de correções.
 
-\item Chi-Yu Li pointed out a typo and an error in one of the code examples.
+\item Chi-Yu Li apontou erros de digitação e um erro em um de nossos códigos de exemplo.
 
-\item Doan Thanh Nam corrected an example.
+\item Doan Thanh Nam corrigiu um exemplo.
 
-\item Muhammad Saied translated the book into Arabic, and found several errors in the process.
+\item Muhammad Saied traduziu o livro para o Árabe, encontrando vários erros nesse decurso.
 
-\item Marius Margowski found an inconsistency in a code example.
+\item Marius Margowski encontrou uma inconsistência num código de exemplo.
 
-\item Leslie Klein discovered another error in the series expansion of $\exp(-x^2)$, identified typos in the card array figures, and gave helpful suggestions to clarify several exercises.
+\item Leslie Klein encontrou outro erro na expansão de séries de $\exp(-x^2)$, identificou erros de digitação nas figuras de arrays de cartas, e deu úteis sugestões para tornar mais claros muitos exercícios.
 
-\item Micah Lindstrom reported half a dozen typos and sent corrections.
+\item Micah Lindstrom reportou alguns erros de digitação e enviou correções.
 
-\item James Riely ported the textbook source from LaTeX to Sphinx.
+\item James Riely transformou os fontes do livro de LaTeX para Sphinx.
 \\ \url{http://fpl.cs.depaul.edu/jriely/thinkapjava/}
 
-\item Peter Knaggs ported the book to C\#.
+\item Peter Knaggs adaptou o livro para C\#.
 \\ \url{http://www.rigwit.co.uk/think/sharp/}
 
-\item Heidi Gentry-Kolen recorded several video lectures that follow the book.
+\item Heidi Gentry-Kolen gravou muitas aulas palestras acompanhando este livro.
 \\ \url{https://www.youtube.com/user/digipipeline}
 
+\item Marcello D. B. Semedo traduziu o livro para Português do Brasil {\it (nota do próprio tradutor)}.
+\\ \url{https://github.com/marcellosemedo/EbookPenseEmJava/}
 
 % ENDCONTRIB
 
 \end{itemize}
 
-We are especially grateful to our technical reviewers: Blythe Samuels, David Wisneski, and Stephen Rose.
-They found errors, made many great suggestions, and helped make the book much better.
+Somos especialmente gratos aos nossos revisores técnicos: Blythe Samuels, David Wisneski, e Stephen Rose.
+Encontraram erros, fizeram muitas ótimas sugestões, e ajudaram a tornar o livro muito melhor.
 
-Additional contributors who found one or more typos: Stijn Debrouwere, Guy Driesen, Andai Velican, Chris Kuszmaul, Daniel Kurikesu, Josh Donath, Rens Findhammer, Elisa Abedrapo, Yousef BaAfif, Bruce Hill, Matt Underwood, Isaac Sultan, Dan Rice, Robert Beard, Daniel Pierce, Michael Giftthaler.
+Contribuidores adicionais que encontraram um ou mais erros de digitação: Stijn Debrouwere, Guy Driesen, Andai Velican, Chris Kuszmaul, Daniel Kurikesu, Josh Donath, Rens Findhammer, Elisa Abedrapo, Yousef BaAfif, Bruce Hill, Matt Underwood, Isaac Sultan, Dan Rice, Robert Beard, Daniel Pierce, Michael Giftthaler.
 
-If you have additional comments or ideas about the text, please send them to: \href{mailto:feedback@greenteapress.com}{\tt feedback@greenteapress.com}.
+Se você tiver comentários adicionais ou idéias sobre o texto, por favor os envie para: \href{mailto:feedback@greenteapress.com}{\tt feedback@greenteapress.com}.
 
 
 \mainmatter
 
 
-\chapter{The way of the program}
+\chapter{O jeito do programa}
 \label{theway}
 
-The goal of this book is to teach you to think like a computer scientist.
-This way of thinking combines some of the best features of mathematics, engineering, and natural science.
-Like mathematicians, computer scientists use formal languages to denote ideas, specifically computations.
-Like engineers, they design things, assembling components into systems and evaluating trade-offs among alternatives.
-And like scientists, they observe the behavior of complex systems, form hypotheses, and test predictions.
+A meta deste livro é ensinar você a pensar como um cientista da computação.
+Este modo de pensar combina alguns dos melhores conceitos de Matemática, Engenharia e Ciências Naturais.
+Como matemáticos, os cientistas da computação utilizam linguagens formais para expressar idéias, especificamente cálculos.
+Como engenheiros, eles projetam coisas, montam componentes em sistemas e avaliam substituições entre várias alternativas.
+E como cientistas, eles observam o comportamento de sistemas complexos, formulam hipóteses, e fazem experimentos.
 
 \index{problem solving}
 
@@ -1055,7 +1060,7 @@ Add an extra one.
 
 \end{exercise}
 
-
+\
 \chapter{Variables and operators}
 
 This chapter describes how to write statements using variables, which store values like numbers and words, and operators, which are symbols that perform a computation.
