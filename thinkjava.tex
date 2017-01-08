@@ -1,10 +1,9 @@
 \documentclass[12pt]{book}
 
 %Permite uso de caracteres da Língua Portuguesa
-%\usepackage[brazilian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[portuguese]{babel}
+%\usepackage[portuguese]{babel}
 \usepackage{ulem}
 
 \title{Think Java - Pense em Java}
@@ -399,7 +398,7 @@ Se você tiver comentários adicionais ou idéias sobre o texto, por favor os en
 \mainmatter
 
 
-\chapter{O jeito do programa}
+\chapter{O jeito de programar}
 \label{theway}
 
 A meta deste livro é ensinar você a pensar como um cientista da computação.
@@ -410,72 +409,71 @@ E como cientistas, eles observam o comportamento de sistemas complexos, formulam
 
 \index{problem solving}
 
-The single most important skill for a computer scientist is {\bf problem solving}.
-It involves the ability to formulate problems, think creatively about solutions, and express solutions clearly and accurately.
-As it turns out, the process of learning to program is an excellent opportunity to develop problem solving skills.
-That's why this chapter is called, ``The way of the program''.
+A habilidade individual mais importante para um cientista da computação é a de {\bf solucionar problemas}.
+Envolve a capacidade de formular problemas, pensar criativamente em soluções, e expressar soluções de forma clara e acurada.
+Como acontece, o processo de aprendizagem de programação é uma excelente oportunidade de desenvolvimento das habilidades de solução de problemas.
+É por isso que esse capítulo é chamado: ''O jeito de programar''.
 
-On one level you will be learning to program, a useful skill by itself.
-But on another level you will use programming as a means to an end.
-As we go along, that end will become clearer.
+De um lado, você aprenderá a programar, uma habilidade útil por si só.
+Mas, por outro lado, você usará a programação para atingir um propósito.
+E conforme avançamos, este propósito se tornará mais claro.
 %Learning how to think in terms of computation is much more valuable than just learning how to write code.
 
 
-\section{What is programming?}
+\section{O que programação?}
 
-\index{program}
+\index{programa}
 
-A {\bf program} is a sequence of instructions that specifies how to perform a computation.
+Um {\bf programa} ŕ uma sequência de instruções que determinam como realizar uma computação.
+\footnote{{\it Nota adaptada do tradutor:} esta definição não se aplica a todos os paradigmas de programação.}
 %\footnote{This definition does not apply to all programming languages; for alternatives, see \url{https://en.wikipedia.org/wiki/Declarative_programming}.}
-The computation might be something mathematical, like solving a system of equations or finding the roots of a polynomial.
-It can also be a symbolic computation, like searching and replacing text in a document or (strangely enough) compiling a program.
-The details look different in different languages, but a few basic instructions appear in just about every language.
+A computação pode ser algo matemático, como solucionar um sistema de equações ou achar as raízes de um polinômio.
+Também pode ser uma computação simbólico, como procurar e substituir texto num documento ou (estranhamente) compilar um programa.
+Os detalhes se apresentam diferentes entre as diferentes linguagens, contudo algumas instruções ou comandos que aparecem em quase qualquer linguagem:
+\footnote{{\it Nota do tradutor:} essa afirmação é pretensiosa, há linguagens que se diferem muito umas das outras e praticamente pode não haver nada em comum entre elas. Pode-se dizer que: ''as linguagens imperativas, possuem entre si elementos comuns que se seguem:''}
 
 \begin{description}
-\item[input:] Get data from the keyboard, a file, a sensor, or some other device.
-\item[output:] Display data on the screen, or send data to a file or other device.
-\item[math:] Perform basic mathematical operations like addition and division.
-\item[decisions:] Check for certain conditions and execute the appropriate code.
-\item[repetition:] Perform some action repeatedly, usually with some variation.
+\item[entrada:] {\it (input)} obtém dados do teclado, ou arquivo, ou sensor, ou qualquer outro dispositivo.
+\item[saída:] {\it output} exibe dados na tela, ou envia dados para o arquivos ou qualquer outro dispositivo.
+\item[operação matemática:] realiza algumas operações matemáticas como adição e divisão.
+\item[decisão:] verifica determinada(s) condição(ões) e executa o código apropriado.
+\item[repetição:] executa alguma ação repetidamente, geralmente com alguma variação.
 \end{description}
 
 \index{programming}
 
-Believe it or not, that's pretty much all there is to it.
-Every program you've ever used, no matter how complicated, is made up of small instructions that look much like these.
-So you can think of {\bf programming} as the process of breaking down a large, complex task into smaller and smaller subtasks.
-The process continues until the subtasks are simple enough to be performed with the basic instructions provided by the computer.
+Acredite ou não, é praticamente tudo sobre o que o programa faz.
+Cada programa que você usou, não importa quão complicado seja, é composto de pequenas instruções que se assemelham muito com essas.
+Então você pode considerar {\bf programação} como sendo o processo de decompor uma grande e complexa tarefa em menores e menores subtarefas. 
+O processo continua até que as subtarefas sejam simples o suficientes para serem realizadas com instruções básicas providas pela linguagem de programação. \footnote{{\it Nota do tradutor:} no original estava escrito ''pelo computador'' ao invés de ''pela linguagem de programação''}
 
+\section{O que é Ciência da Computação?}
 
-\section{What is computer science?}
-
-One of the most interesting aspects of writing programs is deciding how to solve a particular problem, especially when there are multiple solutions.
-For example, there are numerous ways to sort a list of numbers, and each way has its advantages.
+Um dos aspectos mais interessantes da escrita de programas é decidir sobre como resolver um problema em particular, especialmente quando há múltiplas formas de o solucionar.
+Por exemplo, há muitos jeitos de ordenar uma lista de números, cada qual com suas vantagens.
 %(see \url{http://www.sorting-algorithms.com/})
-In order to determine which way is best for a given situation, we need techniques for describing and analyzing solutions formally.
-%That is where computer science comes in.
+De modo a escolher qual o melhor caminho para uma solucionar determinada situação, necessitamos de técnicas para descrever e analisar as resoluções formalmente. E é aqui que a Ciência da Computação entra.
 
 \index{computer science}
 \index{algorithm}
 
-{\bf Computer science} is the science of algorithms, including their discovery and analysis.
-An {\bf algorithm} is a sequence of steps that specifies how to solve a problem.
-Some algorithms are faster than others, and some use less space in computer memory.
-As you learn to develop algorithms for problems you haven't solved before, you also learn to think like a computer scientist.
-%It's much more fun to discover new algorithms than to write the code for solutions that other people came up with!
+{\bf Ciência da Computação} é a ciência do algoritmo, incluindo sua descoberta e análise.
+Um {\bf algoritmo} é uma sequência de passos que especificam como resolver um problema.
+Alguns algoritmos são mais rápidos do que outros, e alguns usam menos espaço na memória do computador.
+à media que aprende a desenvolver algoritmos para problemas que você não resolveu antes, você também aprende a pensar como um cientista da computação.
 
 \index{bug}
 \index{debugging}
 
-Designing algorithms and writing code is difficult and error-prone.
-For historical reasons, programming errors are called {\bf bugs}, and the process of tracking them down and correcting them is called {\bf debugging}.
-As you learn to debug your programs, you will develop new problem solving skills.
-You will need to think creatively when unexpected errors happen.
+Projetar algoritmos e escrever código é difícil e propenso a erros.
+Por razões históricas, os erros de programação são chamados de {\bf bugs}, e o processo de rastreá-los e corrigi-los é chamado de  {\bf depuração} ou {\bf debugging (em Inglês)}.
+A medida que você aprende a depurar seu programa, você desenvolverá novas habilidade na resolução de problemas.
+Você precisará pensar criativamente quando erros inesperados acontecem.
 
-Although it can be frustrating, debugging is an intellectually rich, challenging, and interesting part of computer programming.
-In some ways, debugging is like detective work.
-You are confronted with clues, and you have to infer the processes and events that led to the results you see.
-Thinking about how to correct programs and improve their performance sometimes even leads to the discovery of new algorithms.
+Embora possa ser frustrante, a depuração é uma peça da programação de computadores intelectualmente fértil e desafiadora. 
+Em alguns casos, a depuração assemelha-se ao trabalho de um detetive.
+Você é confrontado com algumas pistas, e tem que inferir os processos e eventos que conduzem aos resultados vistos.
+Pensar em como corrigir programas e aperfeiçoá-los em seu desempenho algumas vezes conduzem à descoberta de novos algoritmos.
 
 
 \section{Programming languages}
