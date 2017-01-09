@@ -764,11 +764,11 @@ She said "Hello!" to me.
 \end{stdout}
 
 
-\section{Formatting code}
+\section{Formatando o código}
 \label{formatting}
 
-In Java programs, some spaces are required.
-For example, you need at least one space between words, so this program is not legal:
+Em programas Java, alguns espaço são requeridos.
+Por exemplo, você necessita pelo menos um espaço entre palavras, do contrário seu programa será ilegal:
 
 \begin{code}
 publicclassGoodbye{
@@ -780,8 +780,8 @@ publicclassGoodbye{
 }
 \end{code}
 
-But most other spaces are optional.
-For example, this program is legal:
+Mas a maioria dos outros espaços são opcionais.
+Por exemplos, este programa é legal:
 
 \begin{code}
 public class Goodbye {
@@ -792,8 +792,8 @@ System.out.println("cruel world");
 }
 \end{code}
 
-The newlines are optional, too.
-So we could just write:
+Os caracteres newlines , novas linhas, são opcionais, também.
+Então, você pode apenas escrever:
 
 \begin{code}
 public class Goodbye { public static void main(String[] args)
@@ -801,11 +801,11 @@ public class Goodbye { public static void main(String[] args)
 ("cruel world");}}
 \end{code}
 
-It still works, but the program is getting harder and harder to read.
-Newlines and spaces are important for organizing your program visually, making it easier to understand the program and find errors when they occur.
+Continua a funcionar, porém o programa está ficando cada vez mais difícil de ler.
+Novas linhas e espaços são importantes para organizar seu programa visualmente, tornando-o mais fácil de entender e de achar erros quando ocorrem.
 
-Many editors will automatically format source code with consistent indenting and line breaks.
-For example, in DrJava (see Appendix~\ref{development}) you can indent the code by selecting all text ({\sf Ctrl+A}) and pressing the {\sf Tab} key.
+Muitos editores automaticamente formatarão seu código-fonte com uma identação consistente e quebras de linhas.
+Por exemplo, no DrJava (veja Apêndice~\ref{development}) vocẽ pode identar o código selecionado todo o texto ({\sf Ctrl+A}) e pressionando a tecla {\sf Tab}.
 
 
 %\section{Style guidelines}
@@ -820,13 +820,13 @@ For example, in DrJava (see Appendix~\ref{development}) you can indent the code 
 
 \index{Google style}
 
-Organizations that do a lot of software development usually have strict guidelines on how to format source code.
-For example, Google publishes its Java coding standards for use in open-source projects: \url{http://google.github.io/styleguide/javaguide.html}.
+Empresas que realizam muito desenvolvimento de software possuem diretrizes rigorosas de como formatar o código-fonte.
+Por exemplo, a Google publica suas normas de codificação java para uso em software livre: \url{http://google.github.io/styleguide/javaguide.html}.
 %It is easier to understand a large codebase when all the source code is formatted consistently.
 %Plus following style guidelines helps you to avoid common programming mistakes that are difficult to debug.
 
-You might not understand these guidelines now, because they refer to language features we haven't yet seen.
-But you might want to refer back to them periodically as you read this book.
+Você pode não entender essas diretrizes agora, porque ela fazem referências a recursos da linguagem que ainda não vimos.
+Mas, vocẽ pode consultar elas periodicamente enquanto lê este livro.
 
 %In the meantime, there are many software tools that help programmers find and correct style issues.
 %One of the most popular is Checkstyle, which enforces most of Google's guidelines.
