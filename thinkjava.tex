@@ -833,23 +833,23 @@ Mas, vocẽ pode consultar elas periodicamente enquanto lê este livro.
 %Instructions for downloading and running Checkstyle are in Appendix~\ref{checkstyle}.
 
 
-\section{Debugging code}
+\section{Depurando o código}
 \label{sec:examples}
 
-It is a good idea to read this book in front of a computer so you can try out the examples as you go.
-You can run many of the examples directly in DrJava's Interactions Pane (see Appendix~\ref{development}).
-But if you put the code in a source file, it will be easier to try out variations.
+É uma boa idéia ler este livro em frente a um computador, assim você pode testar os exemplos enquanto lê.
+Você pode rodar muitos dos exemplos diretamente no painel de interações do DrJava (veja Apêndice~\ref{development}).
+Mas se você digitar o código no arquivo fonte, será mais fácil de experimentar variações.
 %For more information on working with DrJava, see Appendix~\ref{development}.
 
 \index{error!message}
 
-Whenever you are experimenting with a new feature, you should also try to make mistakes.
-For example, in the hello world program, what happens if you leave out one of the quotation marks?
-What if you leave out both?
-What if you spell \java{println} wrong?
-These kinds of experiments help you remember what you read.
-They also help with debugging, because you learn what the error messages mean.
-It is better to make mistakes now and on purpose than later on and accidentally.
+Sempre que você experimentar um novo recurso, você deveria também tentar gerar erros.
+Por exemplo, no programa ''Olá, mundo!'', o que acontece se você omitir uma das aspas?
+O que acontece se você omitir ambas?
+E se digitar \java{println} errado?
+Estes tipos de experimentos ajudam você a lembrar do que leu.
+Eles também ajudam com a depuração, porque você aprenderá o que as mensagens de erros geradas significam.
+É melhor cometer erros agora propositalmente do que depois, acidentalmente.
 
 \index{experimental debugging}
 \index{debugging!experimental}
@@ -857,117 +857,116 @@ It is better to make mistakes now and on purpose than later on and accidentally.
 %\index{Holmes, Sherlock}
 %\index{Doyle, Arthur Conan}
 
-Debugging is like an experimental science: once you have an idea about what is going wrong, you modify your program and try again.
-If your hypothesis was correct, then you can predict the result of the modification, and you take a step closer to a working program.
-If your hypothesis was wrong, you have to come up with a new one.
+A depuração é parecida com a ciência empírica: uma vez que se tem uma idéia do que está acontecendo de errado, você modifica o programa e tenta novamente.
+Se sua hipótese estava correta, então você pode predizer o resultado de uma modificação, e você dará um passo adiante para um programa operacional.
+Se sua hipótese estava errado, você pode trazer a tona uma nova.
 %As Sherlock Holmes pointed out, ``When you have eliminated the impossible, whatever remains, however improbable, must be the truth.''
 %(A.~Conan Doyle, {\em The Sign of Four}.)
 
-Programming and debugging should go hand in hand.
-Don't just write a bunch of code and then perform trial and error debugging until it all works.
-Instead, start with a program that does {\em something} and make small modifications, debugging them as you go, until the program does what you want.
-That way you will always have a working program, and it will be easier to isolate errors.
+Programação e depuração devem caminhar lado a lado.
+Não escreva apenas um monte de código e então realize testes e depuração de erros até tudo funcionar.
+Ao invés disso, comece com um programa que faça {\em algo} e faça modificações pequenas, depurando-as conforme avança, até que o programa faça o que você quer.
+Desse modo você sempre terá um programa operando, e será mais fácil de isolar erros.
 
 \index{Linux}
 \index{Torvalds, Linus}
 \index{Greenfield, Larry}
 
-A great example of this principle is the Linux operating system, which contains millions of lines of code.
-It started out as a simple program Linus Torvalds used to explore the Intel 80386 chip.
-According to Larry Greenfield in {\it The Linux Users' Guide}, ``One of Linus's earlier projects was a program that would switch between printing AAAA and BBBB.
-This later evolved to Linux.''
+Um bom exemplo deste princípio é o núcleo do sistema operacional GNU Linux, o qual contém milhões de linhas de código.
+Ele começou como um simples programa que Linus Torvalds usou para explorar o processador Intel 80386.
+De acordo com Larry Greenfield em {\it The Linux Users' Guide}, ``Um dos projetos anteriores de Linus foi um programa que alternava-se em trocar a impressão AAAA e BBBB. Isto depois evolui ao Linux.''
 
 %Later chapters will make more suggestions about debugging and other programming practices.
 
-Finally, programming sometimes brings out strong emotions.
-If you are struggling with a difficult bug, you might feel angry, despondent, or embarrassed.
-Remember that you are not alone, and most if not all programmers have had similar experiences.
-Don't hesitate to reach out to a friend and ask questions!
+Finalmente, programação às vezes trás grandes emoções.
+Se você está se debatendo com um bug difícil de resolver, você provavelmente vai sentir raiva, desespero, ou embaraço.
+Lembre-se que você não está sozinho, e a maioria, senão todos, dos programadores tiveram experiências similares.
+Não hesite em alcançar um amigo e fazer perguntas!
 
 
-\section{Vocabulary}
+\section{Vocabulário}
 
-Throughout the book, we try to define each term the first time we use it.
-At the end of each chapter, we include the new terms and their definitions in order of appearance.
-If you spend some time learning this vocabulary, you will have an easier time reading the following chapters.
+Ao longo deste livro, tentamos definir cada termo na primeira vez que os usamos.
+Ao final de cada capítulo, incluímos os novos termos e suas definições na ordem de aparecimento.
+Se você gastar algum tempo aprendendo esse vocabulário, você terá uma experiência mais fácil de leitura dos próximos capítulos.
 
 \begin{description}
 
-\term{problem solving}
-The process of formulating a problem, finding a solution, and expressing the solution.
+\term{resolução de problemas}
+O processo de formular um problema, achar uma solução, e expressar a solução.
 
-\term{program}
-A sequence of instructions that specifies how to perform tasks on a computer.
+\term{programa}
+Uma sequência de instruções que especificam como realizar tarefas num computador.
 
-\term{programming}
-The application of problem solving to creating executable computer programs.
+\term{programação}
+A aplicação da resolução de problemas para criar programas de computador executáveis.
 
-\term{computer science}
-The scientific and practical approach to computation and its applications.
+\term{Ciência da Computação}
+A abordagem prática e científica da computação e suas aplicações.
 
-\term{algorithm}
-A procedure or formula for solving a problem, with or without a computer.
+\term{algoritmo}
+Um procedimento ou fórmula para solucionar um problema, com ou sem um computador.
 
 \term{bug}
-An error in a program.
+Um erro num programa.
 
-\term{debugging}
-The process of finding and removing errors.
+\term{depuração}
+Processo de encontrar e remover erros.
 
-\term{high-level language}
-A programming language that is designed to be easy for humans to read and write.
+\term{linguagem de alto nível}
+Uma linguagem de programação que é projetada para ser fácil para os humanos escreverem e lerem.
 
-\term{low-level language}
-A programming language that is designed to be easy for a computer to run.
-Also called ``machine language'' or ``assembly language''.
+\term{linguagem de baixo nível}
+Uma linguagem de programação que é projetada para ser fácil para o computador executar.
+Também é chamado de ''linguagem de máquina'' ou ''linguagem assembly'' ou ''linguagem de montagem''.
 
-\term{portable}
-The ability of a program to run on more than one kind of computer.
+\term{portabilidade}
+A habilidade de um programa se ser executado em mais de um tipo de computador.
 
-\term{interpret}
-To run a program in a high-level language by translating it one line at a time and immediately executing the corresponding instructions.
+\term{interpretar}
+Rodar um programa numa linguagem de alto nível e traduzi-la uma parte por vez e imediatamente executar as instruções correspondentes.
 
-\term{compile}
-To translate a program in a high-level language into a low-level language, all at once, in preparation for later execution.
+\term{compilar}
+Traduzir um programa em uma linguagem de alto nível em uma linguagem de baixo nível, tudo de uma vez só, preparando-o para execução posterior. 
 
-\term{source code}
-A program in a high-level language, before being compiled.
+\term{código-fonte}
+Um programa em uma linguagem de alto nível, antes de ser compilado.
 
-\term{object code}
-The output of the compiler, after translating the program.
+\term{código-objeto}
+A saída de um compilador, após traduzir o programa.
 
-\term{executable}
-Another name for object code that is ready to run on specific hardware.
+\term{executável}
+Outro nome para o código-objeto que está pronto para executado num hardware específico.
 
 \term{byte code}
-A special kind of object code used for Java programs.
-Byte code is similar to a low-level language, but it is portable like a high-level language.
+Um tipo especial de código-objeto usado em programas Java.
+Byte code é similar a uma linguagem de baixo nível, mais é portável como uma linguagem de alto nível.
 
-\term{statement}
-Part of a program that specifies one step of an algorithm.
+\term{instrução}
+Parte de um programa que especifica um passo de uma algoritmo.
 
-\term{print statement}
-A statement that causes output to be displayed on the screen.
+\term{instrução print}
+Uma instrução que faz a saída ser exibida na tela.
 
-\term{method}
-A named sequence of statements.
+\term{método}
+Sequência de instruções nomeada.
 
-\term{class}
-For now, a collection of related methods.
-(We will see later that there is more to it.)
+\term{classe}
+Por enquanto, uma coleção de métodos afins.
+(Veremos depois que muito mais do que isso).
 
-\term{comment}
-A part of a program that contains information about the program but has no effect when the program runs.
+\term{comentário}
+Uma parte do programa que contém informação sobre o programas mas que é sem efeito quando o programa é executado.
 
 \term{string}
-A sequence of characters; the primary data type for text.
+Uma sequência de caracteres; o tipo de dados primário para textos.
 
 \term{newline}
-A special character signifying the end of a line of text.
-Also known as line ending, end of line (EOL), or line break.
+Um caracter especial que significa o fim de uma linha de texto.
+Também conhecido como finalizador de linha, fim de linha (end of line -- EOL), ou quebra de linha.
 
-\term{escape sequence}
-A sequence of code that represents a special character when used inside a string.
+\term{sequência de escape}
+Uma sequência do código que representa um caracter especial quando usado dentro de uma string.
 
 %\term{whitespace}
 %Newlines, tab characters, and other spaces in a source program.
