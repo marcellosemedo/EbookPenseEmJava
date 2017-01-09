@@ -9,6 +9,9 @@
 \title{Think Java - Pense em Java}
 \author{Allen B. Downey and Chris Mayfield}
 
+\newcommand{\alteradotradutor}{\textsuperscript{\bf (alterado pelo tradutor)}}
+\newcommand{\quotes}[1]{``#1''}
+\newcommand{\notadotradutor}[1]{\footnote{{\bf Nota do tradutor:} #1}}
 \newcommand{\thetitle}{Think Java - Pense em Java}
 \newcommand{\thesubtitle}{Como pensar como um cientista da Computação}
 \newcommand{\theauthors}{Allen B. Downey e Chris Mayfield}
@@ -476,44 +479,44 @@ Você é confrontado com algumas pistas, e tem que inferir os processos e evento
 Pensar em como corrigir programas e aperfeiçoá-los em seu desempenho algumas vezes conduzem à descoberta de novos algoritmos.
 
 
-\section{Programming languages}
+\section{Linguagens de programação}
 
 \index{high-level language}
 \index{language!high-level}
 
-The programming language you will learn is Java, which is a {\bf high-level language}.
-Other high-level languages you may have heard of include Python, C and C++, Ruby, and JavaScript.
+A linguagem de programação que você aprenderá é o Java, que é uma {\bf linguagem de programação de alto nível}.
+Entre outras linguagens de alto nível que você pode ter ouvido falar incluem-se o Python, C, C++, Ruby, e JavaScript.
 
 \index{low-level language}
 \index{language!low-level}
 
-Before they can run, programs in high-level languages have to be translated into a {\bf low-level language}, also called ``machine language''.
-This translation takes some time, which is a small disadvantage of high-level languages.
-But high-level languages have two advantages:
+Antes deles serem executados, os programas em linguagens de alto nível devem ser traduzidos em uma {\bf linguagem de baixo nível}, também chamada ''linguagem de máquina''.
+Essa tradução leva algum tempo, o que é uma pequena desvantagem das linguagens de alto nível.
+Mas, linguagens de alto nível têm duas vantagens:
 
 \begin{itemize}
 
-\item It is {\em much} easier to program in a high-level language.
-Programs take less time to write, they are shorter and easier to read, and they are more likely to be correct.
+\item É {\em muito} mais fácil programar em linguagem de alto nível.
+Os programas levam menos tempo para serem escritos, eles são mais curtos e fáceis de ler, e é bem mais provável estarem corretos. 
 
 \index{portable}
 
-\item High-level languages are {\bf portable}, meaning they can run on different kinds of computers with few or no modifications.
-Low-level programs can only run on one kind of computer, and have to be rewritten to run on another.
+\item Linguagens de alto nível são {\bf portáveis}, o que significa que podem rodar em diferentes tipos de computadores com poucas ou nenhuma modificações.
+Programas de baixo nível pode somente rodar em um tipo de computador, e têm que ser reescritos para rodar em outros.
 
 \end{itemize}
 
 \index{interpret}
 
-Two kinds of programs translate high-level languages into low-level languages: interpreters and compilers.
-An {\bf interpreter} reads a high-level program and executes it, meaning that it does what the program says.
-It processes the program a little at a time, alternately reading lines and performing computations.
-Figure~\ref{fig.interpreter} shows the structure of an interpreter.
+Dois tipos de programas traduzem as linguagens de alto nível em linguagens de baixo nível: interpretadores e compiladores.
+Um {\bf interpretador} lê o programa em linguagem de alto nível e o executa, o que quer dizer que faz o que o programa diz.
+Ele processa o programa um pouco por vez, alternando-se entre ler linhas do programa e executar computações.
+Figura~\ref{fig.interpreter} mostra a estrutura de um interpretador.
 
 \begin{figure}[!ht]
 \begin{center}
 \includegraphics{figs/interpreter.pdf}
-\caption{How interpreted languages are executed.}
+\caption{Como as linguagens interpretadas são executadas.}
 \label{fig.interpreter}
 \end{center}
 \end{figure}
@@ -523,45 +526,45 @@ Figure~\ref{fig.interpreter} shows the structure of an interpreter.
 \index{object code}
 \index{executable}
 
-In contrast, a {\bf compiler} reads the entire program and translates it completely before the program starts running.
-In this context, the high-level program is called the {\bf source code}, and the translated program is called the {\bf object code} or the {\bf executable}.
-Once a program is compiled, you can execute it repeatedly without further translation.
-As a result, compiled programs often run faster than interpreted programs.
+Em contraste, um {\bf compilador} lê o programa inteiro e o traduz completamente antes do programa começar a ser executado.
+Neste contexto, o programa de alto nível é chamado de {\bf código-fonte} e o programa traduzido é chamado de {\bf código-objeto} ou de {\bf executável}.
+Uma vez que o programa é compilado, você pode executá-lo repetidamente sem traduções adicionais.
+Como resultado, os programas compilados frequentemente rodam mais rápidos que os programa interpretados.
 % Figure 1.2 shows the structure of a compiler.
 
 \index{byte code}
 \index{virtual machine}
 \index{JVM}
 
-Java is {\em both} compiled and interpreted.
-Instead of translating programs directly into machine language, the Java compiler generates {\bf byte code}.
-Similar to machine language, byte code is easy and fast to interpret.
-But it is also portable, so it is possible to compile a Java program on one machine, transfer the byte code to another machine, and run the byte code on the other machine.
-The interpreter that runs byte code is called a ``Java Virtual Machine'' (JVM).
+O Java é {\em tanto} compilado {\em quanto} interpretado.
+Ao invés de traduzir o programa diretamente na linguagem da máquina, o compilador java gera {\bf byte code}.
+Assemelhando-se à linguagem da máquina, ''byte code'' é fácil e rápido de interpretador.
+Porém, é também portável, desse modo é possível compilar um programa Java em uma máquina, transferir o ''byte code'' para outra máquina, e rodar o ''byte code'' na outra máquina de outro tipo.
+O interpretador que roda o ''byte code'' é chamado ''Java Virtual Machine'' (JVM).
 %This ability is an advantage of Java over some other high-level languages.
 
 \begin{figure}[!ht]
 \begin{center}
 \includegraphics{figs/compiler.pdf}
-\caption{The process of compiling and running a Java program.}
+\caption{Processo de compilação e execução de um programa Java.}
 \label{fig.compiler}
 \end{center}
 \end{figure}
 
-Figure~\ref{fig.compiler} shows the steps of this process.
-Although it might seem complicated, these steps are automated for you in most program development environments.
-Usually you only have to press a button or type a single command to compile and run your program.
-On the other hand, it is important to know what steps are happening in the background, so if something goes wrong you can figure out what it is.
+Figura~\ref{fig.compiler} mostra os passos desse processo.
+Apesar de parecerem complicados, estes passos são automatizados para você na maioria dos ambientes de desenvolvimento de programas.
+Usualmente você só precisará pressionar um botão ou digitar um único comando para compilar e executar seu programa.
+Por outro lado, é importante conhecer quais passos acontecem nos bastidores, então se algo ocorrer de errado , você pode imaginar o que seja.
 
 
-\section{The hello world program}
+\section{O programa ''Olá, mundo!''}
 \label{hello}
 
 \index{hello world}
 
-Traditionally, the first program you write when learning a new programming language is called the hello world program.
-All it does is display the words ``Hello, World!''\ on the screen.
-In Java, it looks like this:
+Tradicionalmente, o primeiro programa a ser escrito quando se aprende uma nova linguagem de programação é chamado de programa ''Olá, mundo'' (''Hello, World!'', em Inglês).
+Tudo que ele faz é simplesmente exibir as palavras ''Olá, mundo!'' na tela.
+Em Java, é escrito como:
 
 % NOTE(ABD): I changed a lot of ``print'' to ``display'', partly to be
 % more precise, but also to reduce the number of times ``print'' appears,
@@ -577,13 +580,13 @@ public class Hello {
 }
 \end{code}
 
-When this program runs it displays:
+Quando o programa é executado exibe:
 
 \begin{stdout}
 Hello, World!
 \end{stdout}
 
-Notice that the output does not include the quotation marks.
+Observe que a saída não inclui as aspas.
 
 %\index{public}
 %\index{static}
@@ -599,9 +602,10 @@ Notice that the output does not include the quotation marks.
 \index{statement}
 \index{print statement}
 
-Java programs are made up of {\em class} and {\em method} definitions, and methods are made up of {\em statements}.
-A {\bf statement} is a line of code that performs a basic operation.
-In the hello world program, this line is a {\bf print statement} that displays a message on the screen:
+O programa Java é construído com definições de {\em classes} e {\em métodos}; e os métodos são construídos com {\em instruções}.\footnote{{\it Nota do tradutor:} o termo original ''statement'' foi traduzido como ''instrução'', mas poderia ser traduzido, por uso, por ''comando'' ou até mesmo ''declaração''.}
+
+Uma {\bf instrução} é uma linha de código que executa uma atividade básica.
+No programa ''Olá, mundo!'', essa linha é uma instrução {\bf print} que exibe uma mensagem na tela:
 
 \begin{code}
 System.out.println("Hello, World!");
@@ -610,20 +614,20 @@ System.out.println("Hello, World!");
 \index{println}
 \index{semicolon}
 
-\java{System.out.println} displays results on the screen; the name \java{println} stands for ``print line''.
-Confusingly, {\em print} can mean both ``display on the screen'' and ``send to the printer''.
-In this book, we'll try to say ``display'' when we mean output to the screen.
-Like most statements, the print statement ends with a semicolon (\java{;}).
+\java{System.out.println} exibe a mensagem na tela; o nome \java{println} significa ``print line'' {\bf (''imprimir linha'')}.
+De modo confuso, ''imprimir' pode tanto significar ''exibir na tela'' quanto ''enviar para a impressora''.
+Neste livro, tentaremos dizer ''tela'' quando significar exibir no monitor.
+Como a maioria das instruções, a instrução print é finalizado com um ponto-e-vírgula ( \java{;} ).
 
 \index{case-sensitive}
 
-Java is ``case-sensitive'', which means that uppercase and lowercase are not the same.
-In this example, \java{System} has to begin with an uppercase letter; \java{system} and \java{SYSTEM} won't work.
+O Java é ``case-sensitive'', o que significa que maiúsculas e minúsculas não são a mesma coisa.
+No exemplo, \java{System} tem que começar com uma letra maiúscula;  \java{system} e \java{SYSTEM} não funcionam.
 
 \index{method}
 
-A {\bf method} is a named sequence of statements.
-This program defines one method named \java{main}:
+Um {\bf método} é uma sequência de declarações nomeadas.
+Este programa define um método chamado \java{main}:
 
 \begin{code}
 public static void main(String[] args)
@@ -631,31 +635,30 @@ public static void main(String[] args)
 
 \index{main}
 
-The name and format of \java{main} is special: when the program runs, it starts at the first statement in \java{main} and ends when it finishes the last statement.
-Later, we will see programs that define more than one method.
+O nome e o formato do método \java{main} é especial: quando um programa roda, ele começa com a primeira instrução no \java{main}.\footnote{{\it Nota do tradutor:} frase alterada, pois dizia que o programa terminava com a última instrução. Isso não é verdadeiro, podem haver instruções que terminem o programa antes.}
+Depois, veremos como os programas podem definir mais de um método.
 
 \index{class}
 
-A {\bf class} is a collection of methods.
-This program defines a class named \java{Hello}.
-You can give a class any name you like, but it is conventional to start with a capital letter.
-The name of the class has to match the name of the file it is in, so this class has to be in a file named {\tt Hello.java}.
+Numa {\bf classe} podem se definir vários métodos.\footnote{{\it Nota do tradutor:} No original: ''A {\bf class} is a collection of methods.'' {\bf Uma classe é uma coleção de métodos}. O tradutor discorda disso, pois uma classe pode não conter nenhum método.}
+Geralmente, você pode dar qualquer nome a uma classe que quiser, mas se convencionou começar o nome com uma letra maiúscula.
+O nome da classe tem que coincidir com o nome do arquivo que a contém, então esta classe deve estar num arquivo chamado {\tt Hello.java}.
 
-Java uses squiggly braces (\{ and \}) to group things together.
-In {\tt Hello.java}, the outermost braces contain the class definition, and the inner braces contain the method definition.
+O Java usa um par de chaves (\{ e \}) para agrupar instruções ou outras coisas no que se denomina {\bf bloco de programação}.{\alteradotradutor}
+No {\tt Hello.java}, o par de chaves mais externo contém a definição da classe, o par de chaves mais interno contém a definição do método.
 
 \index{comment!inline}
 \index{statement!comment}
 
-The line that begins with two slashes (\java{//}) is a {\bf comment}, which is a bit of English text that explains the code.
-When the compiler sees \java{//}, it ignores everything from there until the end of the line.
-Comments have no effect on the execution of the program, but they make it easier for other programmers (and your future self) to understand what you meant to do.
+A linha que começa com duas barras (\java{//}) é um {\bf comentário}, que é uma porção de texto que (pode) explica(r) o que o código faz.{\alteradotradutor}
+Quando o compilador encontra \java{//}, ele ignora tudo que for escrito até o final da linha.
+Comentários geralmente não afetam a execução do programa, mas eles tornam mais fácil para outros programadores (ou você mesmo, no futuro) a entender o que o código faz.
 
 
-\section{Displaying strings}
+\section{Exibindo strings}
 
-You can put as many statements as you like in \java{main}.
-For example, to display more than one line of output:
+Você pode colocar quantas instruções que quiser no \java{main}.
+Por exemplo, para exibir mais de uma linha de saída:
 
 \begin{code}
 public class Hello {
@@ -668,22 +671,23 @@ public class Hello {
 }
 \end{code}
 
-As this example shows, you can put comments at the end of a line as well as on lines all by themselves.
+Como esse exemplo demonstra, você pode colocar tanto comentários no final da linha quanto no início delas.
 
 \index{quote mark}
 \index{string}
 \index{type!String}
 \index{char}
 
-Phrases that appear in quotation marks are called {\bf strings}, because they contain a sequence of ``characters'' strung together.
-Characters can be letters, numbers, punctuation marks, symbols, spaces, tabs, etc.
+O texto que aparece entre aspas são chamados {\bf strings}\notadotradutor{em Português, \quotes{string} também é denominada de \quotes{cadeia de caracteres}} são uma sequência de ''caracteres'' juntas e encadeadas.
+Caracteres podem ser letras, número, sinais de pontuação, símbolos, espaços, tabulações, etc.
 
 \index{newline}
 \index{print}
 \index{statement!print}
 
-\java{System.out.println} appends a special character, called a {\bf newline}, that moves to the beginning of the next line.
-If you don't want a newline at the end, you can use \java{print} instead of \java{println}:
+\java{System.out.println} adiciona um caracter especial, chamado {\bf newline} (nova linha), que move para o início da nova linha.
+Se você não quiser uma nova linha ao final pode usar \java{print} ao invés de \java{println}:
+java{println}:
 
 \begin{code}
 public class Goodbye {
@@ -697,14 +701,13 @@ public class Goodbye {
 
 \label{goodbye}
 
-In this example, the first statement does not add a newline, so the output appears on a single line as {\tt Goodbye, cruel world}.
-Notice that there is a space at the end of the first string, which appears in the output.
+Neste exemplo, a primeira instrução não adiciona uma nova linha, assim a saída aparece numa linha única como {\tt Goodbye, cruel world}.
+Note que há um espaço no final da primeira string, que aparece na saída.
 
 
-\section{Escape sequences}
+\section{Sequências de escape}
 
-It is possible to display multiple lines of output in just one line of code.
-You just have to tell Java where to put the line breaks.
+É possível exibir linhas múltiplas de saída em apenas uma linhas de código: você deve dizer em Java onde colocar as quebras de linha.
 
 \begin{code}
 public class Hello {
@@ -715,7 +718,7 @@ public class Hello {
 }
 \end{code}
 
-The output is two lines, each ending with a newline character:
+As saídas são duas linhas, cada uma finalizando com um caracter newline:
 
 \begin{stdout}
 Hello!
@@ -724,38 +727,37 @@ How are you doing?
 
 \index{escape sequence}
 
-The \verb"\n" is an {\bf escape sequence}, which is a sequence of characters that represents a special character.
-The backslash allows you to ``escape'' the string's literal interpretation.
-Notice there is no space between \verb"\n" and \verb"How".
-If you add a space there, there will be a space at the beginning of the second line.
+O \verb"\n" é uma {\bf sequência de escape}, a qual é uma sequência de caracteres que representam um caracter especial.
+A barra invertida permite o ``escapar'' da interpretação literal dos caracteres na string.
+Observe que não há espação entre \verb"\n" e \verb"How".
+Se você adicionar o espaço lá, haverá um espaço no início da segunda linha.
 
 \begin{table}[!ht]
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
-\verb"\n" & newline \\
+\verb"\n" & newline (nova linha)\\
 \hline
-\verb"\t" & tab \\
+\verb"\t" & tabulação \\
 \hline
-\verb'\"' & double quote \\
+\verb'\"' & aspas \\
 \hline
-\verb"\\" & backslash \\
+\verb"\\" & barra invertida \\
 \hline
 \end{tabular}
-\caption{Common escape sequences}
+\caption{Sequências de escapes comuns}
 \end{center}
 \end{table}
 
 \index{quote mark}
 
-Another common use of escape sequences is to have quotation marks inside of strings.
-Since double quotes indicate the beginning and end of strings, you need to escape them with a backslash.
+Outro uso comum das sequências de escape é para permitir o uso de aspas dentro das strings - como aspas indicam o início e o fim das strings, você necessitará dar escape para elas utilizando uma barra invertida.
 
 \begin{code}
 System.out.println("She said \"Hello!\" to me.");
 \end{code}
 
-The result is:
+O resultado é:
 
 \begin{stdout}
 She said "Hello!" to me.
