@@ -1,13 +1,15 @@
+%\PassOptionsToPackage{english,portuges}{babel}
+%\PassOptionsToPackage{portuges}{babel}
 \documentclass[12pt]{book}
 
 %Permite uso de caracteres da Língua Portuguesa
-\usepackage[utf8]{inputenc}
+%\usepackage[portuges]{babel}
+\usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
-%\usepackage[portuguese]{babel}
 \usepackage{ulem}
 
 \title{Think Java - Pense em Java}
-\author{Allen B. Downey and Chris Mayfield}
+\author{Allen B. Downey e Chris Mayfield}
 
 \newcommand{\alteradotradutor}{\textsuperscript{\bf (alterado pelo tradutor)}}
 \newcommand{\quotes}[1]{``#1''}
@@ -206,7 +208,7 @@ Permission is granted to copy, distribute, and/or modify this work under the ter
 % END OF THE PART WE SKIP FOR PLASTEX
 \fi
 
-
+%\selectlanguage{english}
 \chapter*{Prefácio}
 \label{preface}
 
@@ -436,8 +438,8 @@ Os detalhes se apresentam diferentes entre as diferentes linguagens, contudo alg
 \footnote{{\it Nota do tradutor:} essa afirmação é pretensiosa, há linguagens que se diferem muito umas das outras e praticamente pode não haver nada em comum entre elas. Pode-se dizer que: ''as linguagens imperativas, possuem entre si elementos comuns que se seguem:''}
 
 \begin{description}
-\item[entrada:] {\it (input)} obtém dados do teclado, ou arquivo, ou sensor, ou qualquer outro dispositivo.
-\item[saída:] {\it output} exibe dados na tela, ou envia dados para o arquivos ou qualquer outro dispositivo.
+\item[entrada:] ({\it input}) obtém dados do teclado, ou arquivo, ou sensor, ou qualquer outro dispositivo.
+\item[saída:] ({\it output}) exibe dados na tela, ou envia dados para o arquivos ou qualquer outro dispositivo.
 \item[operação matemática:] realiza algumas operações matemáticas como adição e divisão.
 \item[decisão:] verifica determinada(s) condição(ões) e executa o código apropriado.
 \item[repetição:] executa alguma ação repetidamente, geralmente com alguma variação.
@@ -805,7 +807,7 @@ Continua a funcionar, porém o programa está ficando cada vez mais difícil de 
 Novas linhas e espaços são importantes para organizar seu programa visualmente, tornando-o mais fácil de entender e de achar erros quando ocorrem.
 
 Muitos editores automaticamente formatarão seu código-fonte com uma identação consistente e quebras de linhas.
-Por exemplo, no DrJava (veja Apêndice~\ref{development}) vocẽ pode identar o código selecionado todo o texto ({\sf Ctrl+A}) e pressionando a tecla {\sf Tab}.
+Por exemplo, no DrJava (veja Apêndice~\ref{development}) você pode identar o código selecionado todo o texto ({\sf Ctrl+A}) e pressionando a tecla {\sf Tab}.
 
 
 %\section{Style guidelines}
@@ -826,7 +828,7 @@ Por exemplo, a Google publica suas normas de codificação java para uso em soft
 %Plus following style guidelines helps you to avoid common programming mistakes that are difficult to debug.
 
 Você pode não entender essas diretrizes agora, porque ela fazem referências a recursos da linguagem que ainda não vimos.
-Mas, vocẽ pode consultar elas periodicamente enquanto lê este livro.
+Mas, você pode consultar elas periodicamente enquanto lê este livro.
 
 %In the meantime, there are many software tools that help programmers find and correct style issues.
 %One of the most popular is Checkstyle, which enforces most of Google's guidelines.
@@ -975,100 +977,98 @@ Uma sequência do código que representa um caracter especial quando usado dentr
 \end{description}
 
 
-\section{Exercises}
+\section{Exercícios}
 
-At the end of each chapter, we include exercises you can do with the things you've learned.
-We encourage you to at least attempt every problem.
-You can't learn to program only by reading about it; you have to practice.
+Ao final de cada capítulo, incluímos exercícios que podem ser resolvidos com o que você aprendeu.
+Incentivamos você a, pelo menos, tentar cada problema.
+Você não pode aprender a programar somente lendo a respeito -- é necessário praticar.
 
-Before you can compile and run Java programs, you might have to download and install a few tools.
-There are many good options, but we recommend DrJava, which is an ``integrated development environment'' (IDE) well suited for beginners.
-Instructions for getting started are in Appendix~\ref{drjava}.
+Antes de compilar e rodar programas em Java, você terá que baixar e instalar algumas ferramentas.
+Há muitas opções boas, mas recomendamos DrJava, que é um ambiente integrado de desenvolvimento (IDE) adequado para iniciantes.
+Instruções de como usar estão no Apêndice~\ref{drjava}.
 
-The code for this chapter is in the {\tt ch01} directory of {\tt ThinkJavaCode}.
-See page~\pageref{code} for instructions on how to download the repository.
-Before you start the exercises, we recommend that you compile and run the examples.
+O código deste capítulo está no diretório {\tt ch01} de {\tt ThinkJavaCode}.
+Verifique a página~\pageref{code} para instruções de como baixar do repositório.
+Antes de começar a fazer os exercício, recomendamos que você compile e rode os exemplos.
 
 
 \begin{exercise}
 
-Computer scientists have the annoying habit of using common English words to mean something other than their common English meaning.
-For example, in English, statements and comments are the same thing, but in programs they are different.
+Cientistas da Computação têm o hábito irritante de usar palavras comuns em Inglês com significado diferente do de uso comum em Inglês.
+Por exemplo, em Inglês, {\it statements} (instruções) e {\it comments} (comentários) são as mesmas coisas, porém, em programação, são diferentes.
 
 \begin{enumerate}
-\item In computer jargon, what's the difference between a statement and a comment?
-\item What does it mean to say that a program is portable?
-\item In common English, what does the word compile mean?
-\item What is an executable? Why is that word used as a noun?
+\item No jargão dos computadores, qual a diferença entre {\it statements} (instruções) e {\it comments} (comentários)?
+\item O que queremos dizer quando falamos que um programa é portável?
+\item Em Português comum, o que a palavra compilar significa? \notadotradutor{No original temos ''em Inglês comum''.}
+\item O que é um executável? Por que essa palavra é usada como substantivo?
 \end{enumerate}
 
-The glossary at the end of each chapter is intended to highlight words and phrases that have special meanings in computer science.
-When you see familiar words, don't assume that you know what they mean!
+O glossário ao fim de cada capítulo tem a intenção de infatizar palavras e frases que têm significado especial na Ciência da Computação.
+Quando você vir palavras familiares, não presuma que você sabe os seus significados.
+
+\end{exercise}
+
+\begin{exercise}
+
+Antes de qualquer coisa, descubra como compilar e rodar um programa em Java.
+Alguns ambientes disponibilizar programas de amostras similares ao exemplo na Seção~\ref{hello}.
+
+\begin{enumerate}
+\item Digite o programa ''Olá, mundo!'', então compile e rode o mesmo.
+
+\item Adicione uma instrução print exibindo uma segunda mensagem após ''Olá, mundo!''.
+Diga algo engraçado como: ''Tudo bem?''
+Compile e rode o programa novamente
+
+\item Inclua um comentário no programa (em qualquer lugar), recompile e rode-o novamente.
+O novo comentário não deve afetar o resultado.
+\end{enumerate}
+
+Este exercício parece ser trivial, mas é um ponto de partida para muitos programas que você trabalhará. Para ter segurança ao depurar, você precisará ter certeza de como usar seu ambiente de programação.
+
+Em alguns ambiente, é fácil perder o rastro de qual programa está executando.
+Você pode achar que está tentando depurar um programa enquanto acidentalmente está rodando outro.
+Adicionando (ou trocando) comandos print é uma maneira simples de assegurar que o programa que você está observando é o que realmente gostaria de estar rodando.
 
 \end{exercise}
 
 
 \begin{exercise}
 
-Before you do anything else, find out how to compile and run a Java program.
-Some environments provide sample programs similar to the example in Section~\ref{hello}.
+É bom cometer tantos erros quanto você possa imaginar para então ver que mensagens de erro o compilador produz.
+Algumas vezes o compilar diz exatamente o que está errado, e tudo que você tem a fazer é consertar.
+Mas, algumas vezes, as mensagens de erros são confusas.
+Com o tempo você desenvolverá uma noção de quando confiar no compilador e quando tentar entender o que aconteceu por si mesmo.
+
+A partir do programa ''Olá, mundo!'', tente cada um dos erros seguintes.
+Após efetuar cada mudança, compile o programa, observe a mensagem de erro (se tiver alguma), e então conserte esse erro.
 
 \begin{enumerate}
-\item Type in the hello world program, then compile and run it.
-
-\item Add a print statement that displays a second message after the ``Hello, World!''.
-Say something witty like, ``How are you?''
-Compile and run the program again.
-
-\item Add a comment to the program (anywhere), recompile, and run it again.
-The new comment should not affect the result.
-\end{enumerate}
-
-This exercise may seem trivial, but it is the starting place for many of the programs we will work with.
-To debug with confidence, you will need to have confidence in your programming environment.
-
-In some environments, it is easy to lose track of which program is executing.
-You might find yourself trying to debug one program while you are accidentally running another.
-Adding (and changing) print statements is a simple way to be sure that the program you are looking at is the program you are running.
-
-\end{exercise}
-
-
-\begin{exercise}
-
-It is a good idea to commit as many errors as you can think of, so that you see what error messages the compiler produces.
-Sometimes the compiler tells you exactly what is wrong, and all you have to do is fix it.
-But sometimes the error messages are misleading.
-Over time you will develop a sense for when you can trust the compiler and when you have to figure things out yourself.
-
-Starting with the hello world program, try out each of the following errors.
-After you make each change, compile the program, read the error message (if there is one), and then fix the error.
-
-\begin{enumerate}
-\item Remove one of the open squiggly braces.
-\item Remove one of the close squiggly braces.
-\item Instead of \java{main}, write \java{mian}.
-\item Remove the word \java{static}.
-\item Remove the word \java{public}.
-\item Remove the word \java{System}.
-\item Replace \java{println} with \java{Println}.
-\item Replace \java{println} with \java{print}.
-\item Delete one of the parentheses.
-Add an extra one.
+\item Remova uma das aberturas de chaves.
+\item Remova uma das fechaduras de chaves.
+\item Ao invés de \java{main}, escreva \java{mian}.
+\item Remova a palavra \java{static}.
+\item Remova a palavra \java{public}.
+\item Remova a palavra \java{System}.
+\item Substitua \java{println} por \java{Println}.
+\item Substitua \java{println} por \java{print}.
+\item Apague um dos parêntesis.
+\item Inclua um parêntesis extra.
 \end{enumerate}
 
 \end{exercise}
 
 \
-\chapter{Variables and operators}
+\chapter{Variáveis e operadores}
 
-This chapter describes how to write statements using variables, which store values like numbers and words, and operators, which are symbols that perform a computation.
-We also explain three kinds of programming errors and offer additional debugging advice.
+Este capítulo descreve como escrever instruções que utilizam variáveis, as quais armazenam conteúdo tais como números e palavras, e operadores, os quais são símbolos que realizam um cálculo.
+Também explicaremos três tipos de erros de programação e forneceremos recomendações adicionais de depuração.
 %Understanding what can go wrong will help you get it right.
 %Finally we discuss the rules of code style, which helps make programs easier to read and debug.
 
 
-\section{Declaring variables}
+\section{Declarando variáveis}
 
 %NOTE: in response to review comments, I am cleaning up the use of
 % ``memory''.  I would like to avoid talking about hardware, or being
@@ -1081,11 +1081,11 @@ We also explain three kinds of programming errors and offer additional debugging
 \index{variable}
 \index{value}
 
-One of the most powerful features of a programming language is the ability to define and manipulate {\bf variables}.
-A variable is a named location that stores a {\bf value}.
-Values may be numbers, text, images, sounds, and other types of data.
+Uma das mais poderosas funcionalidades de uma linguagem de programação é a habilidade para definir e manipular {\bf variáveis}.
+Uma variável é um local nomeado que armazena um {\bf valor} (conteúdo).
+Os valores (conteúdos) podem ser números, textos, imagens, sons, e outros tipos de dados. 
 %They can be printed, and as we'll see later, operated on.
-To store a value, you first have to declare a variable.
+Para armazenar um valor, você precisa antes declarar uma variável.
 %Since the values we want to store are text, we declare that the new variable is a string:
 
 \begin{code}
@@ -1098,24 +1098,24 @@ String message;
 \index{type!char}
 \index{type!String}
 
-This statement is a {\bf declaration}, because it declares that the variable named \java{message} has the type \java{String}.
-Each variable has a {\bf type} that determines what kind of values it can store.
-For example, the \java{int} type can store integers, and the \java{char} type can store characters.
+Este comando é uma {\bf declaração} porque declara que a variável denominada \java{message} é do tipo \java{String}.
+Cada variável é de um {\bf tipo} que determinas qual espécie de valores pode armazenar.
+Por exemplo, o tipo \java{int} pode armazenar inteiros, e o tipo \java{char} pode guardar caracteres. 
 
-Some types begin with a capital letter and some with lowercase.
-We will learn the significance of this distinction later, but for now you should take care to get it right.
-There is no such type as \java{Int} or \java{string}.
+Em Java, alguns ''tipos'' começam com uma letra maiúscula e alguns com uma letra minúscula.
+Aprenderemos a importância dessa distinção depois mas, por enquanto, você deve prestar atenção em escrevê-los corretamente. 
+Não existem tipos tais como \java{Int} ou \java{string}.
 %, and the compiler will complain if you make one up.
 
-To declare an integer variable named \java{x}, you simply type:
+Para declarar um variável inteira denominada \java{x}, simplesmente escreva:
 
 \begin{code}
 int x;
 \end{code}
 
-Note that \java{x} is an arbitrary name for the variable.
-In general, you should use names that indicate what the variables mean.
-For example, if you saw these declarations, you could probably guess what values would be stored:
+Observe que \java{x} é um nome arbitrário para a variável.
+Geralmente, você deve utilizar nomes que indicam o que a variável irá armazenar.
+Por exemplo, se você vir essas declarações, poderá adivinhar quais valores devem ser armazenados:
 
 \begin{code}
 String firstName;
@@ -1125,72 +1125,72 @@ int hour, minute;
 
 \index{case-sensitive}
 
-This example declares two variables with type \java{String} and two with type \java{int}.
-When a variable name contains more than one word, like \java{firstName}, it is conventional to capitalize the first letter of each word except the first.
-Variable names are case-sensitive, so \java{firstName} is not the same as \java{firstname} or \java{FirstName}.
+Este exemplo declara duas variávels do tipo \java{String} e duas do tipo \java{int}.
+Quando um nome de variável contém mais de uma palavra, tal como  \java{firstName}, é convenção tornar maiúscula a primeira letra de cada palavra, com exceção da primeira.
+Os nomes das variáveis se diferenciam de acordo com letras minúsculas ou maiúsculas, desse modo  \java{firstName} não é o mesmo que \java{firstname} ou \java{FirstName}.
 
-\index{syntax}
-\index{semicolon}
+\index{sintaxe}
+\index{ponto-e-vírgula}
 
-This example also demonstrates the {\bf syntax} for declaring multiple variables with the same type on one line: \java{hour} and \java{minute} are both integers.
-Note that each declaration statement ends with a semicolon.
+Este exemplo também demonstra a {\bf sintaxe} para declaração de múltiplas variáveis do mesmo tipo num único comando: \java{hour} e \java{minute} são ambos int (inteiros).
+Observe que cada instrução de declaração termina com um ponto-e-vírgula.
 
-\index{keyword}
+\index{palavra-chave}
 
-You can use any name you want for a variable.
-But there are about 50 reserved words, called {\bf keywords}, that you are not allowed to use as variable names.
-These words include \java{public}, \java{class}, \java{static}, \java{void}, and \java{int}, which are used by the compiler to analyze the structure of the program.
+Você pode usar qualquer nome que quiser para um variável.
+Entretanto, há cerca de 50 palavras reservadas, chamadas {\bf palavras-chave}, que não é permitido usar como nome de variável.
+Entre estas palavras incluem-se \java{public}, \java{class}, \java{static}, \java{void}, e \java{int}, utilizadas pelo computador para decodificar a forma do programa.\notadotradutor{No original estava escrito ''... para analisar a estrutura do programa''}
 
-You can find the complete list of keywords at \url{http://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html}, but you don't have to memorize them.
-Most programming editors provide ``syntax highlighting'', which makes different parts of the program appear in different colors.
+Você pode encontrar um lista completa de palavras-chave em \url{http://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html}, mas não precisa memorizá-las.
+A maioria dos editores de programação disponibilizam um ''realce de sintaxe'' exibindo partes diferentes do programa em cores diferentes.
 %For example, keywords are often blue, strings red, comments green, and other code black.
 %If you type a variable name and it turns blue, watch out!
 
 
-\section{Assignment}
+\section{Atribuição}
 
-\index{assignment}
-\index{statement!assignment}
+\index{atribuição}
+\index{comando!atribuição}
 
-Now that we have declared variables, we want to use them to store values.
-We do that with an {\bf assignment} statement.
+Agora que declaramos variáveis, queremos usá-las para armazenar valores.
+Fazemos isso com uma instrução de {\bf atribuição}.
 
 \begin{code}
-message = "Hello!";  // give message the value "Hello!"
-hour = 11;           // assign the value 11 to hour
-minute = 59;         // set minute to 59
+message = "Hello!";  // message recebe "Hello!"
+hour = 11;           // atribui o valor 11 a hour
+minute = 59;         // coloca ("seta") 79 em minute
 \end{code}
 
-This example shows three assignments, and the comments illustrate different ways people sometimes talk about assignment statements.
-The vocabulary can be confusing here, but the idea is straightforward:
+Este exemplo mostra três atribuições e os comentários explicam diferentes modos que as pessoas algumas vezes se expressam sobre instruções de atribuição.
+O vocabulário pode parecer confuso até agora, mas o conceito é simples:
 
 \begin{itemize}
-\item When you declare a variable, you create a named storage location.
-\item When you make an assignment to a variable, you update its value.
+\item Quando você declara uma variável, você cria um lugar de armazenamento e dá um nome.
+\item Quando você faz uma atribuição a uma variável, você atualiza o seu valor. 
 \end{itemize}
 
-As a general rule, a variable has to have the same type as the value you assign to it.
-For example, you cannot store a string in \java{minute} or an integer in \java{message}.
-We will see some examples that seem to break this rule, but we'll get to that later.
+Como regra geral, uma variável tem que ter o mesmo tipo do valor que a ela é atribuído.
+Por exemplo, você não pode armazenar uma string em \java{minute} ou um inteiro em \java{message}.
+Veremos alguns exemplos que parecem quebrar essa regra, mas faremos isso depois.
 
 %On the other hand, that rule can be confusing.
 %There are many ways that you can convert values from one type to another, and Java sometimes converts things automatically.
 %For now you should remember the general rule, and we'll talk about exceptions later.
 
-A common source of confusion is that some strings {\em look} like integers, but they are not.
-For example, \java{message} can contain the string \java{"123"}, which is made up of the characters \java{'1'}, \java{'2'}, and \java{'3'}.
-But that is not the same thing as the integer \java{123}.
+Um fonte comum de confusão é que algumas strings {\em parecem-se} com inteiros, mas elas não são.
+Por exemplo, \java{message} pode conter a string \java{"123"}, que é constituída dos caracteres \java{'1'}, \java{'2'}, e \java{'3'}.
+Mas, essa não é a mesma coisa que o inteiro \java{123}.
 
 \begin{code}
 message = "123";     // legal
-message = 123;       // not legal
+message = 123;       // ilegal
 \end{code}
 
 \index{initialize}
 
-Variables must be {\bf initialized} (assigned for the first time) before they can be used.
-You can declare a variable and then assign a value later, as in the previous example.
-You can also declare and initialize on the same line:
+Variáveis devem ser {\bf inicializadas} \notadotradutor{É usual utilizar a terminologia, e seus semelhantes, ''inicializar'' ao invés de ''iniciar'' em Computação --- provavelmente por um erro histórico e reincidente de tradução} (atribuído valores para a primeira vez) antes que possam ser usadas.
+Você pode declara uma variável e então atribuir um valor depois, como no exemplo anterior.
+Você também pode declara e inicializar no mesmo comando:\notadotradutor{Foi substituído ''mesma linha'' por ''mesmo comando''}
 
 \begin{code}
 String message = "Hello!";
@@ -1213,38 +1213,38 @@ int minute = 59;
 %In this example, there is no reason to make two assignments, but in many programs it is useful to reassign, or {\bf update}, variables.
 
 
-\section{State diagrams}
+\section{Diagramas de estados}
 \label{state}
 
-Because Java uses the \java{=} symbol for assignment, it is tempting to interpret the statement \java{a = b} as a statement of equality.
-It is not!
+Pelo Java usar o símbolo \java{=} para atribuição, é tentador interpretar o comando \java{a = b} como uma instrução de igualdade.
+Não é.
 
-Equality is commutative, and assignment is not.
-For example, in mathematics if $a = 7$ then $7 = a$.
-In Java \java{a = 7;} is a legal assignment statement, but \java{7 = a;} is not.
-The left side of an assignment statement has to be a variable name (storage location).
+A igualdade é comutativa e a atribuição, não.
+Por exemplo, em Matemática se $a = 7$ então $7 = a$.
+Em Java \java{a = 7;} é um instrução de atribuição legal mas \java{7 = a;} não é.
+O lado esquerdo de um comando de atribuição tem que ter o nome da variável (local de armazenamento).
 
-Also, in mathematics, a statement of equality is true for all time.
-If $a = b$ now, $a$ is always equal to $b$.
-In Java, an assignment statement can make two variables equal, but they don't have to stay that way.
+Também, em Matemática, a operação de igualdade é verdadeira sempre.
+Se $a = b$ agora, $a$ sempre é igual a $b$.
+Em Java, uma instrução de atribuição pode tornar duas variáveis iguais, mas elas não têm que permanecer dessa forma. 
 
 \begin{code}
 int a = 5;
-int b = a;     // a and b are now equal
-a = 3;         // a and b are no longer equal
+int b = a;     // a e b iguais agora
+a = 3;         // a e b deixam de ser iguais
 \end{code}
 
-The third line changes the value of \java{a}, but it does not change the value of \java{b}, so they are no longer equal.
+A terceira linha muda o valor de \java{a} mas não muda o valor de \java{b}, então elas não são mais iguais.
 
 \index{state}
 
-Taken together, the variables in a program and their current values make up the program's {\bf state}.
-Figure~\ref{fig.state} shows the state of the program after these assignment statements run.
+Isoladamente, as variáveis num programa e seus valores atuais constituem os {\bf estado} do programa.
+Figura~\ref{fig.state} mostra o estado do programa após que as instruções de atribuição rodarem.
 
 \begin{figure}[!ht]
 \begin{center}
 \includegraphics{figs/state.pdf}
-\caption{State diagram of the variables \java{a} and \java{b}.}
+\caption{Diagrama de estado das variáveis \java{a} e \java{b}.}
 \label{fig.state}
 \end{center}
 \end{figure}
@@ -1252,16 +1252,15 @@ Figure~\ref{fig.state} shows the state of the program after these assignment sta
 \index{state diagram}
 \index{diagram!state}
 
-Diagrams like this one that show the state of the program are called {\bf state diagrams}.
-Each variable is represented with a box showing the name of the variable on the outside and the value inside.
-As the program runs, the state changes, so you should think of a state diagram as a snapshot of a particular point in time.
+Diagramas como este que mostram o estado do programa são chamados {\bf diagramas de estado}.
+Cada variável é representada como uma caixa mostrando o nome da variável por fora e o valor internamente.
+Conforme é programa for executado, os estados mudam, então você deve considerar o diagrama de estado como uma fotografia de um ponto particular no tempo.
 
-
-\section{Printing variables}
+\section{Exibindo variáveis}
 \label{sec:printvar}
 
-You can display the value of a variable using \java{print} or \java{println}.
-The following statements declare a variable named \java{firstLine}, assign it the value \java{"Hello, again!"}, and display that value.
+Você pode exibir o valor de uma variável usando \java{print} ou \java{println}.
+As instruções seguintes declaram uma variável chamada \java{firstLine}, atribui o valor \java{"Hello, again!"} a ela, e mostra esse valor.
 
 \begin{code}
 String firstLine = "Hello, again!";
@@ -1274,8 +1273,8 @@ System.out.println(firstLine);
 %Hello, again!
 %\end{stdout}
 
-When we talk about displaying a variable, we generally mean the {\em value} of the variable.
-To display the {\em name} of a variable, you have to put it in quotes.
+Quando falamos em exibir uma variável, geralmente significa o {\em valor} da variável.
+Para exibir o {\em nome} de uma variável, você pode colocar o nome entre aspas.
 %For example: \java{System.out.println("firstLine");}
 
 \begin{code}
@@ -1283,14 +1282,14 @@ System.out.print("The value of firstLine is ");
 System.out.println(firstLine);
 \end{code}
 
-For this example, the output is:
+Por exemplo, o valor é:
 
 \begin{stdout}
 The value of firstLine is Hello, again!
 \end{stdout}
 
-Conveniently, the syntax for displaying a variable is the same regardless of its type.
-For example:
+Convenientemente, a sintaxe para exibir uma variável é a mesma independentemente do seu tipo.
+Por exemplo:
 
 \begin{code}
 int hour = 11;
@@ -1302,19 +1301,18 @@ System.out.print(minute);
 System.out.println(".");
 \end{code}
 
-The output of this program is:
+A saída desse programa é:
 
 \begin{stdout}
 The current time is 11:59.
 \end{stdout}
 
-To output multiple values on the same line, it's common to use several \java{print} statements followed by \java{println} at the end.
-But don't forget the \java{println}!
-On many computers, the output from \java{print} is stored without being displayed until \java{println} is run; then the entire line is displayed at once.
-If you omit the \java{println}, the program might display the stored output at unexpected times or even terminate without displaying anything.
+Para exibir múltiplos valores na mesma linha, é comum usar vários comandos \java{print} seguidos por \java{println} no fim.
+Mas, não esqueça do \java{println}!
+Em muitos computadores, a saída do \java{print} é armazenada sem ser exibida até que o \java{println} seja executado; então a linha inteira é exibida de uma vez.
+Se você omitir o \java{println}, o programa pode exibir a saída armazenada em situações inesperadas ou até terminar sem exibir nada.
 
-
-\section{Arithmetic operators}
+\section{Operadores aritméticos}
 \label{sec:arithops}
 
 %Recall that Java programs are organized into {\em classes}, each of which has one or more {\em methods}, each of which has one or more {\em statements}.
@@ -1323,12 +1321,12 @@ If you omit the \java{println}, the program might display the stored output at u
 \index{operator}
 \index{addition!integer}
 
-{\bf Operators} are symbols that represent simple computations.
+{\bf Operadores} são símbolos que representam computações simples.
 %Most operators in Java do what you expect them to do, since they are common mathematical symbols.
-For example, the addition operator is \java{+}, subtraction is \java{-}, multiplication is \java{*}, and division is \java{/}.
+Por exemplo, o operador de adição é \java{+}, subtração é \java{-}, multiplicação é \java{*}, e divisão é \java{/}.
 %Variables are replaced with their values before the computation is performed.
 
-The following program converts a time of day to minutes:
+O programa a seguir converte um horário do dia em minutos:
 
 \begin{code}
 int hour = 11;
@@ -1340,34 +1338,35 @@ System.out.println(hour * 60 + minute);
 \index{expression}
 \index{operand}
 
-In this program, \java{hour * 60 + minute} is an {\bf expression}, which represents a single value to be computed.
-When the program runs, each variable is replaced by its current value, and then the operators are applied.
-The values operators work with are called {\bf operands}.
+Neste programa, \java{hour * 60 + minute} é uma {\bf expressão} que representa um valor único a ser computado.
+Quando o programa executa, cada variável é substituída por seu valor atual, e então os operadores são aplicados.
+O operadores de valores trabalham com o que se chama {\bf operandos}.
 
-The result of the previous example is:
+O resultado do exemplo anterior é:
 
 \begin{stdout}
 Number of minutes since midnight: 719
 \end{stdout}
 
-Expressions are generally a combination of numbers, variables, and operators.
-When complied and executed, they become a single value.
+As expressões são geralmente uma combinação de números, variáveis e operadores.
+Quando compiladas e executadas, elas se tornam um valor único.
 
-For example, the expression \java{1 + 1} has the value \java{2}.
-In the expression \java{hour - 1}, Java replaces the variable with its value, yielding \java{11 - 1}, which has the value \java{10}.
-In the expression \java{hour * 60 + minute}, both variables get replaced, yielding \java{11 * 60 + 59}.
-The multiplication happens first, yielding \java{660 + 59}.
-Then the addition yields \java{719}.
 
-Addition, subtraction, and multiplication all do what you expect, but you might be surprised by division.
-For example, the following fragment tries to compute the fraction of an hour that has elapsed:%, but it has a logic error:
+Por exemplo, a expressão \java{1 + 1} possui o valor \java{2}.
+Na expressão \java{hour - 1}, o máquina Java substitui a variável pelo seu valor, produzindo \java{11 - 1}, que tem o valor \java{10}.
+Na expressão \java{hour * 60 + minute}, ambas variáveis são substituídas, produzindo \java{11 * 60 + 59}.
+A multiplicação é realizada primeiro, produzindo \java{660 + 59}.
+Então a adição produz \java{719}.
+
+Adição, subtração, e multiplicação fazem tudo o que se espera, mas você pode ser surpreendido pela divisão. 
+Por exemplo, o fragmento a seguir tentar computar a fração de uma hora que foi decorrida:
 
 \begin{code}
 System.out.print("Fraction of the hour that has passed: ");
 System.out.println(minute / 60);
 \end{code}
 
-The output is:
+A saida é:
 
 \begin{stdout}
 Fraction of the hour that has passed: 0
@@ -1377,29 +1376,29 @@ Fraction of the hour that has passed: 0
 \index{integer division}
 \index{arithmetic!integer}
 
-This result often confuses people.
-The value of \java{minute} is 59, and 59 divided by 60 should be 0.98333, not 0.
-The problem is that Java performs ``integer division'' when the operands are integers.
-By design, integer division always rounds toward zero, even in cases like this one where the next integer is close.
+Este resultado frequentemente confunde as pessoas.
+O valor de \java{minute} é 59, e 59 dividido por 50 deveria ser 0,98333, e não 0.
+O questão é que a máquina Java realiza uma ''divisão inteira'' quando os operandos são inteiros.
+Por definição, a divisão inteira sempre arredonda para baixo, mesmo nos casos como este em que o inteiro seguinte é próximo.
 
-As an alternative, we can calculate a percentage rather than a fraction:
+Como alternativa, podemos calcular uma porcentagem ao invés da fração:
 
 \begin{code}
 System.out.print("Percent of the hour that has passed: ");
 System.out.println(minute * 100 / 60);
 \end{code}
 
-The new output is:
+A nova saída é:
 
 \begin{stdout}
 Percent of the hour that has passed: 98
 \end{stdout}
 
-Again the result is rounded down, but at least now it's approximately correct.
+Novamente o resultado é arredondado para baixo mas, pelo menos, agora está aproximado corretamente.
 %To get a more precise answer, we can use a different type of variable that can store fractional values.
 
 
-\section{Floating-point numbers}
+\section{Números de ponto flutuante}
 
 \index{floating-point}
 \index{double}
@@ -2280,25 +2279,25 @@ Table~\ref{tab:format} lists a few common uses, to give you an idea of how thing
 For more details, refer to the documentation of \java{java.util.Formatter}.
 The easiest way to find documentation for Java classes is to do a web search for ``Java'' and the name of the class.
 
-\begin{table}[!ht]
-\begin{center}
-\begin{tabular}{|l|l|l|}
-\hline
-\java{\%d} & decimal integer & 12345 \\
-\hline
+%\begin{table}[!ht]
+%\begin{center}
+%\begin{tabular}{|l|l|l|}
+%\hline
+%\java{\%d} & decimal integer & 12345 \\
+%\hline
 %\java{\%,d} & decimal integer with comma separators & 12,345 \\
 %\hline
-\java{\%08d} & padded with zeros, at least 8 digits wide & 00012345 \\
-\hline
-\java{\%f} & floating-point & 6.789000 \\
-\hline
-\java{\%.2f} & rounded to 2 decimal places & 6.79 \\
-\hline
-\end{tabular}
-\caption{Example format specifiers}
-\label{tab:format}
-\end{center}
-\end{table}
+%\java{\%08d} & padded with zeros, at least 8 digits wide & 00012345 \\
+%\hline
+%\java{\%f} & floating-point & 6.789000 \\
+%\hline
+%\java{\%.2f} & rounded to 2 decimal places & 6.79 \\
+%\hline
+%\end{tabular}
+%\caption{Example format specifiers}
+%\label{tab:format}
+%\end{center}
+%\end{table}
 
 
 \section{Centimeters to inches}
@@ -11269,12 +11268,12 @@ Whether or not you actually make these changes, draw a UML class diagram that sh
 \renewcommand{\chaptermark}[1]{\markboth{Appendix \thechapter ~~ #1}{}}
 
 
-\chapter{Development tools}
+\chapter{Ferramentes de desenvolvimento}
 \label{development}
 
-The steps for compiling, running, and debugging Java code depend on your development environment and operating system.
-We avoided putting these details in the main text, because they can be distracting.
-Instead, we provide this appendix with a brief introduction to DrJava -- an {\bf integrated development environment} (IDE) that is well suited for beginners -- and other development tools, including Checkstyle for code quality and JUnit for testing.
+Os passos para compilar, executar e depurar o código Java dependem do seu ambiente de desenvolvimento e sistemas operacional.
+Evitamos colocar esses detalhes no texto principal por ele podem desviar a atenção.
+Ao invés disso, disponibilizamos este apêndice com uma bre introdução ao DrJava --- um {\bf ambiente de desenvolvimento integrado} (IDE) que é muito adequado para iniciantes -- e outras ferramentas de desenvolvimento, incluindo-se o Checkstyle para qualidade de software e JUnit para testes.
 
 \index{IDE}
 
